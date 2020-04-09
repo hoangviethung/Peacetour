@@ -1,4 +1,5 @@
 import { watch, series, parallel, src, dest } from 'gulp'
+import del from 'del'
 import pug from 'gulp-pug'
 import babel from 'gulp-babel'
 import uglify from 'gulp-uglify'
@@ -12,6 +13,26 @@ import { jsTask } from './script'
 import { htmlTask } from './html'
 import { cssCore } from './core-css'
 import { cssTask } from './css'
+
+const imageChangeTask = (path, stats) => {
+	const filePathnameGlob = path.replace(/[\/\\]/g, '/')
+	const destPathname = filePathnameGlob
+		.replace('src', '_dist')
+		.replace(
+			filePathnameGlob.split('/')[filePathnameGlob.split('/').length - 1],
+			''
+		)
+	del(filePathnameGlob.replace('src', '_dist'))
+	console.log(`Copy: "${filePathnameGlob}"   =====>   "${destPathname}"`)
+	return src(filePathnameGlob).pipe(dest(destPathname))
+}
+
+const imageRemoveTask = (path, stats) => {
+	const filePathnameGlob = path.replace(/[\/\\]/g, '/')
+	const destPathname = filePathnameGlob.replace('src', '_dist')
+	console.log(`Deleted: "${destPathname}"`)
+	return del(destPathname)
+}
 
 const server = () => {
 	bSync.init({
@@ -30,7 +51,7 @@ const server = () => {
 
 		return src(filePathnameGlob)
 			.pipe(
-				plumber(function(err) {
+				plumber(function (err) {
 					this.emit('end')
 				})
 			)
@@ -51,7 +72,7 @@ const server = () => {
 
 			return src(filePathnameGlob)
 				.pipe(
-					plumber(function(err) {
+					plumber(function (err) {
 						this.emit('end')
 					})
 				)
@@ -64,21 +85,16 @@ const server = () => {
 		}
 	)
 
-	watch(['src/assets/**/**.{svg,png,jpg,jpeg,gif,mp4,pdf}'], {
-		awaitWriteFinish: true,
-	}).on('change', (path, stats) => {
-		const filePathnameGlob = path.replace(/[\/\\]/g, '/')
-		console.log(`Copy file ${path}`)
-		const destPathname = filePathnameGlob
-			.replace('src', '_dist')
-			.replace(
-				filePathnameGlob.split('/')[
-					filePathnameGlob.split('/').length - 1
-				],
-				''
-			)
-		return src(filePathnameGlob).pipe(dest(destPathname))
+	watch(['src/assets/**/**.**'], {
+		ignorePermissionErrors: true,
+		delay: 300,
+		events: 'all',
 	})
+		.on('add', imageChangeTask)
+		.on('change', imageChangeTask)
+		.on('addDir', imageChangeTask)
+		.on('unlink', imageRemoveTask)
+		.on('unlinkDir', imageRemoveTask)
 
 	watch(['src/js/main.js', 'src/js/lib/**.js'], series(jsTask))
 
@@ -87,7 +103,7 @@ const server = () => {
 		console.log(`Transpile file ${filePathnameGlob}`)
 		return src(filePathnameGlob)
 			.pipe(
-				plumber(function(err) {
+				plumber(function (err) {
 					console.log(err)
 					this.emit('end')
 				})
