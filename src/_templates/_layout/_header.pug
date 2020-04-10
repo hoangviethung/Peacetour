@@ -1,1 +1,71 @@
 header
+	// MENU TOP
+	.top-header
+		.container.h-100
+			.row.no-gutters.ai-c.h-100
+				// MENU TOP
+				ul.nav-menu-top
+					li.item-menu-top
+						a.link-menu-top(href="gioi-thieu.html") Giới thiệu
+					li.item-menu-top
+						a.link-menu-top(href="tin-tuc.html") Tin tức
+					li.item-menu-top
+						a.link-menu-top(href="lien-he.html") Liên hệ
+					li.item-menu-top
+						a.link-menu-top(href="thu-vien.html") Thư viện
+				// ĐƯỜNG DÂY NÓNG
+				.hot-line
+					.icon
+						img(src="./assets/icons/phone-menu-top.webp" alt="HOT-LINE")
+					.text Hotline
+				// ĐĂNG KÝ - ĐĂNG NHẬP
+				.user-login
+					.icon
+						img(src="./assets/icons/user-menu-top.webp" alt="LOGIN")
+					.text Tài khoản
+				// NGÔN NGỮ
+				.language
+					ul.list-language
+						li.item.active(data-language="vi")
+							img.lazyload.blur-up(data-src="./assets/icons/vi.webp" alt="VIET-NAM")
+						li.item(data-language="en")
+							img.lazyload.blur-up(data-src="./assets/icons/en.webp" alt="ENGLISH")
+						li.item(data-language="jp")
+							img.lazyload.blur-up(data-src="./assets/icons/jp.webp" alt="JAPAN")
+						li.item(data-language="fr")
+							img.lazyload.blur-up(data-src="./assets/icons/fr.webp" alt="FRANCE")
+	// BOTTOM MENU
+	.bottom-menu
+		.container.h-100
+			.block-logo
+				a(href="index.html")
+					.logo
+						img.lazyload.blur-up(data-src="./assets/logo.webp" alt="LOGO-HOA-BINH")
+			.row.no-gutters.ai-c.h-100
+				ul.nav-menu-bottom
+					li.item-menu-bottom
+						a.link-menu-bottom(href="gioi-thieu.html") tour trong nước
+					li.item-menu-bottom
+						a.link-menu-bottom(href="tin-tuc.html") tour nước ngoài
+					li.item-menu-bottom
+						a.link-menu-bottom(href="lien-he.html") khách sạn
+					li.item-menu-bottom
+						a.link-menu-bottom(href="thu-vien.html") nhà hàng
+					li.item-menu-bottom
+						a.link-menu-bottom(href="thu-vien.html") thuê xe
+					li.item-menu-bottom
+						a.link-menu-bottom(href="thu-vien.html") vé máy bay
+					li.item-menu-bottom
+						a.link-menu-bottom(href="thu-vien.html") tàu hòa bình
+					li.item-menu-bottom
+						a.link-menu-bottom(href="thu-vien.html") dịch vụ khác
+					li.item-menu-bottom.search
+						.icon-search
+							img.lazyload.blur-up(data-src="./assets/icons/search-icon.webp", alt="SEARCH")
+						.block-form-search
+							form(action="#", method="get")
+								.form-group
+									label.d-n(for="#")
+									input(type="text", name="" placeholder="Nhập để tìm kiếm...")
+									button
+										img.lazyload.blur-up(data-src="./assets/icons/search-icon.webp", alt="SEARCH")

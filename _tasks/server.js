@@ -1,4 +1,10 @@
-import { watch, series, parallel, src, dest } from 'gulp'
+import {
+	watch,
+	series,
+	parallel,
+	src,
+	dest
+} from 'gulp'
 import del from 'del'
 import pug from 'gulp-pug'
 import babel from 'gulp-babel'
@@ -7,12 +13,24 @@ import rename from 'gulp-rename'
 import bSync from 'browser-sync'
 import plumber from 'gulp-plumber'
 import sourcemap from 'gulp-sourcemaps'
-import { fakeAPITask } from './api'
-import { jsCore } from './core-js'
-import { jsTask } from './script'
-import { htmlTask } from './html'
-import { cssCore } from './core-css'
-import { cssTask } from './css'
+import {
+	fakeAPITask
+} from './api'
+import {
+	jsCore
+} from './core-js'
+import {
+	jsTask
+} from './script'
+import {
+	htmlTask
+} from './html'
+import {
+	cssCore
+} from './core-css'
+import {
+	cssTask
+} from './css'
 
 const imageChangeTask = (path, stats) => {
 	const filePathnameGlob = path.replace(/[\/\\]/g, '/')
@@ -42,7 +60,9 @@ const server = () => {
 		},
 		port: 8000,
 	})
+
 	watch(['src/_templates/_layout/**.pug'], series(htmlTask))
+	watch(['src/_templates/_share/**.pug'], series(htmlTask))
 
 	watch(['src/**.pug']).on('change', (path, stats) => {
 		const pageName = path.split('\\' || '/')[1]
@@ -63,33 +83,35 @@ const server = () => {
 			.pipe(dest('_dist'))
 	})
 
-	watch(['src/_templates/**/**.pug', '!src/_templates/_layout/**.pug']).on(
+	watch(['src/_templates/**/**.pug']).on(
 		'change',
 		(path, stats) => {
 			const pageName = path.split('\\' || '/')[2]
 			const filePathnameGlob = `src/${pageName}.pug`
 			console.log(`Render file ${pageName}.pug`)
 
-			return src(filePathnameGlob)
-				.pipe(
-					plumber(function (err) {
-						this.emit('end')
-					})
-				)
-				.pipe(
-					pug({
-						pretty: '\t',
-					})
-				)
-				.pipe(dest('_dist'))
+			if (filePathnameGlob.length < 0) {
+				return src(filePathnameGlob)
+					.pipe(
+						plumber(function (err) {
+							this.emit('end')
+						})
+					)
+					.pipe(
+						pug({
+							pretty: '\t',
+						})
+					)
+					.pipe(dest('_dist'))
+			}
 		}
 	)
 
 	watch(['src/assets/**/**.**'], {
-		ignorePermissionErrors: true,
-		delay: 300,
-		events: 'all',
-	})
+			ignorePermissionErrors: true,
+			delay: 300,
+			events: 'all',
+		})
 		.on('add', imageChangeTask)
 		.on('change', imageChangeTask)
 		.on('addDir', imageChangeTask)

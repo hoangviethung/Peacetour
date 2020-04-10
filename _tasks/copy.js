@@ -6,7 +6,7 @@ const copyFavicon = () => {
 }
 
 const copyAssets = () => {
-	return src('src/assets/**/**.{svg,png,jpg,jpeg,gif,mp4}').pipe(
+	return src('src/assets/**/**.{svg,png,jpg,jpeg,gif,mp4,webp}').pipe(
 		dest('_dist/assets')
 	)
 }

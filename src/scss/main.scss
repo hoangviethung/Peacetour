@@ -2,9 +2,6 @@
 @import '_globals/main';
 @import '_layouts/main';
 
+@import 'pages/_share/main';
 @import 'pages/index/main';
 @import 'pages/map/main';
-
-body{
-    background-color: red;
-}
