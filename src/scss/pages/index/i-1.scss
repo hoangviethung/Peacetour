@@ -1,0 +1,123 @@
+.hot-tour {
+	margin: 50px 0;
+
+	.slider-hot-tour {
+		margin-top: 45px;
+
+		.item-hot-tour {
+			&:nth-child(2n) {
+				figure {
+					&::after {
+						background: none;
+					}
+				}
+			}
+
+			figure {
+				position: relative;
+
+				figcaption {
+					position: absolute;
+					top     : 0;
+					left    : 0;
+					width   : 100%;
+					height  : 100%;
+				}
+
+				.description,
+				.block-price {
+					position : absolute;
+					left     : 50%;
+					transform: translateX(-50%);
+					z-index  : 1;
+				}
+
+				.description {
+					position      : absolute;
+					top           : 25%;
+					width         : 70%;
+					color         : #fff;
+					text-shadow   : 1px 1px 1px #000000;
+					text-transform: uppercase;
+					text-align    : center;
+
+					.number {
+						color      : map-get($mau, main);
+						font-size  : 125.17px;
+						line-height: 1;
+						float      : left;
+					}
+
+					.text-day {
+						font-size: 33.41px;
+					}
+
+					.country {
+						font-size: 19.49px;
+					}
+
+					time {
+						font-size: 17.48px;
+					}
+				}
+
+				.block-price {
+					position         : absolute;
+					bottom           : 10%;
+					width            : 90px;
+					height           : 90px;
+					background-image : url(../assets/images/bg-price.webp);
+					background-size  : 100% 100%;
+					background-repeat: no-repeat;
+
+					.price,
+					.currency {
+						position : absolute;
+						left     : 50%;
+						transform: translateX(-50%);
+						color    : #fff;
+						font-size: 14px;
+					}
+
+					.price {
+						top: 30%;
+					}
+
+					.currency {
+						bottom: 25%;
+					}
+				}
+
+				&:after,
+				&:before {
+					content       : '';
+					position      : absolute;
+					top           : 0;
+					left          : 0;
+					width         : 100%;
+					height        : 100%;
+					transition    : .3s all ease-in-out;
+					pointer-events: none;
+				}
+
+				&::after {
+					background: #99bed0;
+				}
+
+				&::before {
+					background: rgba($color: #000000, $alpha: .3);
+				}
+			}
+
+			@media (min-width: 1025px) {
+				&:hover {
+					figure {
+						&:after {
+							opacity: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

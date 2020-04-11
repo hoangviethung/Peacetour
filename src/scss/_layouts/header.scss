@@ -209,6 +209,7 @@ header {
 			bottom        : -50px;
 			right         : 0;
 			opacity       : 0;
+			z-index       : 20;
 			pointer-events: none;
 			transition    : .2s all ease-in-out;
 

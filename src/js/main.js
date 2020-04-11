@@ -1,6 +1,7 @@
 import Cookie from './lib/Cookie'
 import Loading from './lib/Loading'
 import getSVG from './lib/GetSVG'
+import Tab from './lib/Tab'
 
 // SHOW BACK TO TOP
 const showBackToTop = () => {
@@ -39,11 +40,6 @@ const bannerSlider = () => {
 		watchSlidesProgress: true,
 		mousewheelControl: true,
 		keyboardControl: true,
-		pagination: {
-			el: '.slider-banner .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-		},
 		on: {
 			progress: function () {
 				var swiper = this;
@@ -73,6 +69,44 @@ const bannerSlider = () => {
 	})
 }
 
+const tourTypeSlider = () => {
+	var swiper = new Swiper('.slider-tour-type .swiper-container', {
+		slidesPerView: 6,
+		spaceBetween: 15,
+		loop: true,
+		speed: 500,
+		simulateTouch: false,
+		// Disable preloading of all images
+		preloadImages: false,
+		// Enable lazy loading
+		lazy: true,
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false,
+		},
+		breakpoints: {},
+	})
+}
+
+const hotTourSlider = () => {
+	var swiper = new Swiper('.slider-hot-tour .swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 0,
+		loop: false,
+		speed: 500,
+		simulateTouch: false,
+		// Disable preloading of all images
+		preloadImages: false,
+		// Enable lazy loading
+		lazy: true,
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false,
+		},
+		breakpoints: {},
+	})
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
 	getSVG();
@@ -80,4 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	showBackToTop();
 	showFormSearch();
 	bannerSlider();
+	tourTypeSlider();
+	hotTourSlider();
+	const tabBlockBookTour = new Tab('.block-book-tour');
 })

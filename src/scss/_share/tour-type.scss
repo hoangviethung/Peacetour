@@ -1,0 +1,22 @@
+.list-tour-type {
+	margin: 50px 0;
+
+	figure {
+		img {
+			display: block;
+			width  : 60px;
+			height : 60px;
+			margin : 0 auto;
+		}
+
+		figcaption {
+			margin-top: 10px;
+
+			p {
+				color     : #808080;
+				font-size : 16px;
+				text-align: center;
+			}
+		}
+	}
+}

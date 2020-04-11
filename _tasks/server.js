@@ -62,7 +62,6 @@ const server = () => {
 	})
 
 	watch(['src/_templates/_layout/**.pug'], series(htmlTask))
-	watch(['src/_templates/_share/**.pug'], series(htmlTask))
 
 	watch(['src/**.pug']).on('change', (path, stats) => {
 		const pageName = path.split('\\' || '/')[1]
@@ -83,27 +82,25 @@ const server = () => {
 			.pipe(dest('_dist'))
 	})
 
-	watch(['src/_templates/**/**.pug']).on(
+	watch(['src/_templates/**/**.pug', '!src/_templates/_layout/**.pug']).on(
 		'change',
 		(path, stats) => {
 			const pageName = path.split('\\' || '/')[2]
 			const filePathnameGlob = `src/${pageName}.pug`
 			console.log(`Render file ${pageName}.pug`)
 
-			if (filePathnameGlob.length < 0) {
-				return src(filePathnameGlob)
-					.pipe(
-						plumber(function (err) {
-							this.emit('end')
-						})
-					)
-					.pipe(
-						pug({
-							pretty: '\t',
-						})
-					)
-					.pipe(dest('_dist'))
-			}
+			return src(filePathnameGlob)
+				.pipe(
+					plumber(function (err) {
+						this.emit('end')
+					})
+				)
+				.pipe(
+					pug({
+						pretty: '\t',
+					})
+				)
+				.pipe(dest('_dist'))
 		}
 	)
 

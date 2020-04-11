@@ -28,29 +28,6 @@
 				opacity: 0;
 			}
 		}
-
-		.swiper-pagination {
-			.swiper-pagination-bullet {
-				width           : 15px;
-				height          : 15px;
-				border          : 2px solid #ffffff;
-				opacity         : 1;
-				border-radius   : 50%;
-				background-color: rgba($color: #ffffff, $alpha: .5);
-				transition      : all .2s ease-in-out;
-				margin          : 0 15px;
-
-				&.swiper-pagination-bullet-active {
-					background-color: map-get($mau, main);
-				}
-			}
-		}
-
-		@media (max-width: 767.98px) {
-			.swiper-pagination {
-				display: none;
-			}
-		}
 	}
 
 	@media (max-width: 1024.98px) {

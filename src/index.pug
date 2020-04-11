@@ -7,7 +7,10 @@ block var
 block loading
 	include _templates/_layout/_loading
 block banner,breadcrumb
-	include ./_templates/_share/_banner
+	include ./_templates/_layout/_banner
 block main
+	include _templates/_layout/_block-book-tour
+	include _templates/_layout/_tour-type
 	include _templates/index/i-1
+	include _templates/index/i-2
 block scripts

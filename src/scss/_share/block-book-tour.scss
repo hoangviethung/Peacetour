@@ -1,0 +1,101 @@
+.block-book-tour {
+	position  : relative;
+	margin-top: -75px;
+	z-index   : 30;
+
+	.block-list-tab {
+		border-top-left-radius : 10px;
+		border-top-right-radius: 10px;
+		background-color       : rgba($color: map-get($mau, main), $alpha: .8);
+		padding                : 10px 20px;
+		max-width              : 550px;
+	}
+
+	.list-tab {
+		display: flex;
+
+		.item {
+			color         : #ffffff;
+			text-transform: uppercase;
+			margin        : 0 25px;
+
+			&.active {
+				color: #78c4fe;
+			}
+		}
+	}
+
+	.tab-content {
+		background-color: #e8e8e8;
+		height          : 110px;
+	}
+
+	.block-form {
+		padding-left: 50px;
+
+		.form-row {
+			margin-right: -15px;
+			margin-left : -15px;
+		}
+	}
+
+	.form-group {
+		padding-top   : 20px;
+		padding-bottom: 20px;
+		padding-right : 15px;
+		padding-left  : 15px;
+
+		label {
+			width        : 100%;
+			color        : map-get($mau, main);
+			font-size    : 16px;
+			margin-bottom: 10px;
+			font-weight  : 700;
+		}
+
+		input,
+		select,
+		option {
+			cursor    : pointer;
+			font-size : 14px;
+			font-style: italic;
+			border    : 0;
+			background: #fff;
+			height    : 35px;
+			width     : 100%;
+			padding   : 0 5px;
+		}
+
+		input {
+			width  : 200px;
+			color  : #808080;
+			padding: 0 10px;
+		}
+
+		.btn-submit-2 {
+			margin-left: 25px;
+		}
+	}
+
+	.block-submit {
+		display        : flex;
+		justify-content: center;
+		align-items    : center;
+		padding-top    : 0;
+		padding-bottom : 0;
+
+		.submit {
+			position  : relative;
+			width     : 100%;
+			height    : 100%;
+			background: map-get($mau, main);
+
+			.btn-submit {
+				position : absolute;
+				top      : 50%;
+				left     : 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}
