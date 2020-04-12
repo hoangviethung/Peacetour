@@ -2,19 +2,19 @@ import Cookie from './lib/Cookie'
 import Loading from './lib/Loading'
 import GetSVG from './lib/GetSVG'
 import Tab from './lib/Tab'
-import YoutubeController from './lib/YoutubeController'
+// import YoutubeController from './lib/YoutubeController'
 
 // SHOW BACK TO TOP
 const showBackToTop = () => {
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 800) {
-			$('#back-to-top').addClass('active');
+			$('#back-top').addClass('active');
 		} else {
-			$('#back-to-top').removeClass('active');
+			$('#back-top').removeClass('active');
 		}
 	});
 
-	$("#back-to-top").on("click", function (e) {
+	$("#back-top").on("click", function (e) {
 		e.preventDefault();
 		$("html,body").animate({
 			scrollTop: 0
@@ -72,7 +72,7 @@ const bannerSlider = () => {
 
 const tourTypeSlider = () => {
 	var swiper = new Swiper('.slider-tour-type .swiper-container', {
-		slidesPerView: 6,
+		slidesPerView: 4,
 		spaceBetween: 15,
 		loop: true,
 		speed: 500,
@@ -85,13 +85,17 @@ const tourTypeSlider = () => {
 			delay: 2000,
 			disableOnInteraction: false,
 		},
-		breakpoints: {},
+		breakpoints: {
+			768: {
+				slidesPerView: 6,
+			}
+		},
 	})
 }
 
 const hotTourSlider = () => {
 	var swiper = new Swiper('.slider-hot-tour .swiper-container', {
-		slidesPerView: 3,
+		slidesPerView: 1,
 		spaceBetween: 0,
 		loop: false,
 		speed: 500,
@@ -100,14 +104,22 @@ const hotTourSlider = () => {
 			delay: 2000,
 			disableOnInteraction: false,
 		},
-		breakpoints: {},
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+			},
+
+			578: {
+				slidesPerView: 2,
+			}
+		},
 	})
 }
 
 const brandSlider = () => {
 	var swiper = new Swiper('.slider-brand .swiper-container', {
-		slidesPerView: 4,
-		spaceBetween: 15,
+		slidesPerView: 3,
+		spaceBetween: 0,
 		loop: false,
 		speed: 500,
 		simulateTouch: false,
@@ -119,7 +131,9 @@ const brandSlider = () => {
 			delay: 2000,
 			disableOnInteraction: false,
 		},
-		breakpoints: {},
+		breakpoints: {
+
+		},
 	})
 }
 
@@ -127,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
 	GetSVG();
 	Loading();
-	YoutubeController();
+	// YoutubeController();
 	showBackToTop();
 	showFormSearch();
 	bannerSlider();

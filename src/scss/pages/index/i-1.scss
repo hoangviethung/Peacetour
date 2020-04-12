@@ -43,21 +43,21 @@
 
 					.number {
 						color      : map-get($mau, main);
-						font-size  : 125.17px;
+						font-size  : 125px;
 						line-height: 1;
 						float      : left;
 					}
 
 					.text-day {
-						font-size: 33.41px;
+						font-size: 32px;
 					}
 
 					.country {
-						font-size: 19.49px;
+						font-size: 19px;
 					}
 
 					time {
-						font-size: 17.48px;
+						font-size: 17px;
 					}
 				}
 
@@ -114,6 +114,89 @@
 					figure {
 						&:after {
 							opacity: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		.slider-hot-tour {
+			.item-hot-tour {
+				figure {
+					&:after {
+						background: transparent;
+					}
+
+					.description {
+						top: 15%;
+
+						.number {
+							font-size: 72px;
+						}
+
+						.text-day {
+							font-size  : 24px;
+							line-height: 1;
+						}
+
+						.country {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		margin: 25px 0;
+
+		.slider-hot-tour {
+			margin-top: 25px;
+
+			.item-hot-tour {
+				figure {
+					.description {
+						top: 20%;
+
+						.number {
+							font-size: 125px;
+						}
+
+						.text-day {
+							font-size: 42px;
+						}
+
+						.country {
+							font-size: 24px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 350.98px) {
+		.slider-hot-tour {
+			.item-hot-tour {
+				figure {
+					.description {
+						.number {
+							font-size: 100px;
+						}
+
+						.text-day {
+							font-size: 24px;
+						}
+
+						.country {
+							font-size: 18px;
+						}
+
+						time {
+							font-size: 14px;
 						}
 					}
 				}

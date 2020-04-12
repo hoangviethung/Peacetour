@@ -11,40 +11,40 @@ section.block-book-tour
 				.block-form
 					form(action="#")
 						.form-row
-							.form-group.col-lg-2
+							.form-group.col-lg-2.col-md-4.col-sm-6
 								label(for="type") Lọa tour
 								select#type(name="type")
 									option(value="#") trong nước
 									option(value="#") nước ngoài
 									option(value="#") dài ngày
 									option(value="#") ngắn ngày
-							.form-group.col-lg-2
+							.form-group.col-lg-2.col-md-4.col-sm-6
 								label(for="starting") Nơi khởi hành
 								select#starting(name="starting")
 									option(value="#") hồ chí minh
 									option(value="#") phú quóc
 									option(value="#") hà nội
 									option(value="#") đà nẵng
-							.form-group.col-lg-2
+							.form-group.col-lg-2.col-md-4.col-sm-6
 								label(for="destination") Nơi đến
 								select#destination(name="destination")
 									option(value="#") quy nhơn
 									option(value="#") hà nội
 									option(value="#") hồ chí minh
 									option(value="#") huế
-							.form-group.col-lg-2
+							.form-group.col-lg-2.col-md-4.col-sm-6
 								label(for="destination") Ngày khởi hàng
 								input(type="date")
-							.form-group.col-lg-2
+							.form-group.col-lg-2.col-md-4.col-sm-6
 								label(for="destination") Giá
 								select#destination(name="destination")
 									option(value="#") 0 ~ 10000
 									option(value="#") 10000 ~ 20000
 									option(value="#") 20000 ~ 30000
 									option(value="#") 30000 ~ 40000
-							.form-group.col-lg-2.block-submit
+							.form-group.col-lg-2.col-md-4.block-submit
 								.submit
-									button.btn.btn-submit tìm kiếm
+									button.btn.btn-submit Tìm kiếm
 			// TRA CỨU TOUR
 			.content(tab-id="2")
 				.block-form
@@ -53,7 +53,7 @@ section.block-book-tour
 							.form-group
 								label(for="code-booking") Quý khách vui lòng nhập số booking vào ô trống bên dưới và nhấn nút "Tìm kiếm"
 								input#code-booking(type="text" placeholder="Số booking")
-								button.btn.btn-submit-2 tìm kiếm
+								button.btn.btn-submit-2 Tìm kiếm
 			// TÌM KIẾM THÔNG TIN
 			.content(tab-id="3")
 				.block-form
@@ -62,4 +62,4 @@ section.block-book-tour
 							.form-group
 								label(for="searh-info") Tìm kiếm thông tin trên website Du lịch Hòa Bình
 								input#searh-info(type="text" placeholder="Tour du lịch, điểm đến..")
-								button.btn.btn-submit-2 tìm kiếm
+								button.btn.btn-submit-2 Tìm kiếm

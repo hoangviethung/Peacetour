@@ -6,22 +6,18 @@
 	z-index       : 300;
 	opacity       : 0;
 	pointer-events: none;
+	transition    : .3s all ease-in-out;
 
 	&.active {
 		pointer-events: visible;
 		opacity       : 1;
-		pointer-events: static;
-	}
-
-	@media (max-width: 1024.98px) {
-		display: none;
 	}
 }
 
 #phone-call {
 	cursor  : pointer;
 	position: fixed;
-	right   : 3.5%;
+	right   : 25px;
 	top     : 50%;
 	z-index : 200;
 
@@ -365,6 +361,36 @@
 			text-align: center;
 		}
 	}
+
+	&.color-blue {
+		.title {
+			h2 {
+				color: map-get($mau, main);
+			}
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		.title {
+			h2 {
+				font-size: 24px;
+			}
+		}
+
+		.desc {
+			display: none;
+		}
+	}
+
+	@media (max-width: 350.98px) {
+		.title {
+			h2 {
+				text-align: center;
+				font-size : 18px;
+				width     : 80%;
+			}
+		}
+	}
 }
 
 .sticker {
@@ -397,14 +423,54 @@
 			}
 		}
 	}
+
+	@media (max-width: 575.98px) {
+		figure {
+
+			img,
+			figcaption {
+				-ms-flex        : 0 0 100%;
+				-webkit-box-flex: 0;
+				flex            : 0 0 50%;
+				max-width       : 50%;
+			}
+
+			figcaption {
+				margin-top: 10px;
+
+				h1 {
+					font-size: 24px;
+				}
+
+				p {
+					display: none;
+				}
+			}
+		}
+	}
 }
 
 .index-list-tour-index {
 	margin: 50px 0;
+
+	.btn-view-more {
+		width    : 100%;
+		max-width: 120px;
+		display  : block;
+		margin   : 0 auto;
+	}
+
+	@media (max-width: 767.98px) {
+		margin: 25px 0;
+	}
 }
 
 .list-item {
 	margin-top: 50px;
+
+	@media (max-width: 767.98px) {
+		margin-top: 25px;
+	}
 }
 
 .item-product {
@@ -536,6 +602,16 @@
 		figure {
 			&:after {
 				content: '';
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		margin-bottom: 10%;
+
+		figure {
+			.mode-of-transport {
+				margin-left: 10%;
 			}
 		}
 	}

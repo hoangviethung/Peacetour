@@ -9,6 +9,7 @@
 		background-color       : rgba($color: map-get($mau, main), $alpha: .8);
 		padding                : 10px 20px;
 		max-width              : 550px;
+		width                  : 100%;
 	}
 
 	.list-tab {
@@ -66,7 +67,7 @@
 			padding   : 0 5px;
 		}
 
-		input {
+		input[type="text"] {
 			width  : 200px;
 			color  : #808080;
 			padding: 0 10px;
@@ -95,6 +96,107 @@
 				top      : 50%;
 				left     : 50%;
 				transform: translate(-50%, -50%);
+			}
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		.tab-content {
+			height: auto;
+		}
+
+		.block-form {
+			padding-left  : 25px;
+			padding-right : 25px;
+			padding-bottom: 25px;
+		}
+
+		.block-submit {
+			.submit {
+				background: transparent;
+
+				.btn-submit {
+					left     : 0;
+					transform: unset;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		.block-submit {
+			.submit {
+				.btn-submit {
+					position: static;
+					left    : unset;
+					top     : unset;
+					margin  : 0 auto;
+					display : block;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		margin-top: 25px;
+
+		.block-list-tab {
+			padding         : 10px;
+			background-color: map-get($mau, main);
+		}
+
+		.list-tab {
+			justify-content: center;
+
+			.item {
+				font-size: 12px;
+				margin   : 0 10px;
+			}
+		}
+
+		.block-form {
+			padding-left  : 10px;
+			padding-right : 10px;
+			padding-bottom: 10px;
+
+			.form-row {
+				margin-right: -10px;
+				margin-left : -10px;
+			}
+		}
+
+		.form-group {
+			padding-top   : 10px;
+			padding-bottom: 10px;
+			padding-right : 10px;
+			padding-left  : 10px;
+
+			label {
+				font-size    : 14px;
+				margin-bottom: 5px;
+			}
+
+			.btn-submit-2 {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	@media (max-width: 350.98px) {
+		.list-tab {
+			.item {
+				font-size: 10px;
+			}
+		}
+
+		.form-group {
+			input[type="text"] {
+				width: 100%;
+			}
+
+			.btn-submit-2 {
+				margin-top : 10px;
+				margin-left: 0;
 			}
 		}
 	}

@@ -8,7 +8,7 @@ section.index-list-tour-index
 		.row.list-item
 			-for(j=1;j<4;j++)
 				// BLOCK SẢN PHẦM - DATA HOT = TRUE => XUẤT HIỆN TAG HOT
-				.item-product.col-lg-4.col-md-3(data-hot="true")
+				.item-product.col-lg-4.col-sm-6(data-hot="true")
 					a(href="san-pham-chi-tiet.html")
 						figure
 							.img.ov-h
@@ -26,7 +26,7 @@ section.index-list-tour-index
 									.price 2,375,000 VNĐ
 			-for(h=4;h<7;h++)
 				// BLOCK SẢN PHẦM - DATA HOT = TRUE => XUẤT HIỆN TAG HOT
-				.item-product.col-lg-4.col-md-3(data-hot="false")
+				.item-product.col-lg-4.col-sm-6(data-hot="false")
 					a(href="san-pham-chi-tiet.html")
 						figure
 							.img.ov-h
@@ -42,4 +42,4 @@ section.index-list-tour-index
 											img.lazyload.blur-up(data-src="./assets/icons/airplan.png", alt="AIRPLAN")
 									time 17/04/2020
 									.price 2,375,000 VNĐ
-		a(url="danh-sach-san-pham.html").btn.btn-view-more.mx-at Xem thêm
+		a(url="danh-sach-san-pham.html").btn.btn-view-more Xem thêm
