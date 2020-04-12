@@ -2,17 +2,17 @@ section.index-list-tour-index
 	.container
 		.block-title
 			.title
-				h2.lcl.lcl-1 trong nước
+				h2.lcl.lcl-1 nước ngoài
 			.desc
-				p Du lịch trong nước luôn là một lựa chọn tuyệt vời cho các dịp du lịch mùa nghỉ lễ, Tết. Tour du lịch khám phá những danh lam thắng cảnh nổi tiếng, di tích lịch sử hào hùng luôn mang đến những trải nghiệm khám phá thú vị trên nền văn hóa giàu bản sắc hàng ngàn năm lịch sử của dân tộc Việt Nam.
+				p Khám phá những miền đất mới luôn là khao khát của những người đam mê du lịch. Với nhiều năm kinh nghiệm tổ chức tour du lịch nước ngoài, Du lịch Hòa Bình luôn là một trong những người bạn đồng hành đáng tin cậy nhất trong các chuyến tham quan và trải nghiệm những nét đặc sắc của các quốc gia Châu Á, châu Âu, Úc, Mỹ...
 		.row.list-item
-			-for(j=1;j<4;j++)
+			-for(z=7;z<10;z++)
 				// BLOCK SẢN PHẦM - DATA HOT = TRUE => XUẤT HIỆN TAG HOT
 				.item-product.col-lg-4.col-md-3(data-hot="true")
 					a(href="san-pham-chi-tiet.html")
 						figure
 							.img.ov-h
-								img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+j+".jpg", alt="TOUR-DU-LICH-HOA-BINH")
+								img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+z+".jpeg", alt="TOUR-DU-LICH-HOA-BINH")
 							figcaption
 								.box-info
 									h2 Tên Tou Du Lịch
@@ -24,13 +24,13 @@ section.index-list-tour-index
 											img.lazyload.blur-up(data-src="./assets/icons/airplan.png", alt="AIRPLAN")
 									time 17/04/2020
 									.price 2,375,000 VNĐ
-			-for(h=4;h<7;h++)
+			-for(x=10;x<12;x++)
 				// BLOCK SẢN PHẦM - DATA HOT = TRUE => XUẤT HIỆN TAG HOT
 				.item-product.col-lg-4.col-md-3(data-hot="false")
 					a(href="san-pham-chi-tiet.html")
 						figure
 							.img.ov-h
-								img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+h+".jpg", alt="TOUR-DU-LICH-HOA-BINH")
+								img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+x+".jpeg", alt="TOUR-DU-LICH-HOA-BINH")
 							figcaption
 								.box-info
 									h2 Tên Tou Du Lịch

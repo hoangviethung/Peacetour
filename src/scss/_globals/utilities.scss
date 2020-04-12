@@ -66,7 +66,7 @@
 		left               : 0.3em;
 		width              : 0.4em;
 		height             : 0.4em;
-		background         : url(../assets/icons/phone-fixed.webp);
+		background         : url(../assets/icons/phone-fixed.png);
 		background-position: 50% 50%;
 		background-repeat  : no-repeat;
 		background-size    : cover;
@@ -399,16 +399,73 @@
 	}
 }
 
+.index-list-tour-index {
+	margin: 50px 0;
+}
+
+.list-item {
+	margin-top: 50px;
+}
+
 .item-product {
+	margin-bottom: 3%;
+
 	figure {
+		position: relative;
+
 		.img {
 			height: 240px;
 		}
 
+		figcaption {
+			padding    : 0 10px 10px 10px;
+			border     : 1px solid rgba(0, 0, 0, 0.2);
+			border-left: 1px solid rgba(0, 0, 0, 0.05);
+			border-top : unset;
+			box-shadow : 2px 2px 3px rgba(0, 0, 0, 0.3);
+		}
+
+		.box-info {
+			position  : relative;
+			padding   : 25px 30px 15px 30px;
+			border    : 1px solid #8fb8c7;
+			border-top: 0;
+
+			&:after {
+				content      : '';
+				position     : absolute;
+				bottom       : 0;
+				right        : 0;
+				width        : 0;
+				height       : 0;
+				border-bottom: 60px solid #dde5ea;
+				border-left  : 80px solid transparent;
+			}
+
+			&:before {
+				content  : '+';
+				color    : map-get($mau, main);
+				font-size: 20px;
+				position : absolute;
+				bottom   : 5px;
+				right    : 15px;
+				z-index  : 1;
+			}
+		}
+
+		h2 {
+			font-size    : 17px;
+			color        : map-get($mau, main);
+			margin-bottom: 15px;
+		}
+
 		time,
 		.counting-days {
-			position    : relative;
-			padding-left: 20px;
+			font-size    : 16px;
+			color        : #5d5d5d;
+			position     : relative;
+			padding-left : 25px;
+			margin-bottom: 10px;
 
 			&:after {
 				content          : '';
@@ -421,9 +478,64 @@
 				background-repeat: no-repeat;
 			}
 		}
-		time{
-			&:after{
-				
+
+		time {
+			&:after {
+				background-image: url(../assets/icons/clock.png);
+			}
+		}
+
+		.counting-days {
+			display: inline-flex;
+
+			&:after {
+				background-image: url(../assets/icons/date-time.png);
+			}
+		}
+
+		.mode-of-transport {
+			display      : inline-flex;
+			align-items  : center;
+			margin-left  : 30%;
+			margin-bottom: 15px;
+
+			.item {
+				margin-right: 10px;
+
+				img {
+					width : 30px;
+					height: 30px;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+		.price {
+			font-size : 30px;
+			margin-top: 15px;
+			color     : map-get($mau, main-2);
+		}
+
+		&:after {
+			position         : absolute;
+			z-index          : 100;
+			width            : 51px;
+			height           : 52px;
+			background       : url(../assets/icons/hot-tag.png);
+			background-size  : 100% 100%;
+			background-repeat: no-repeat;
+			top              : -8px;
+			left             : 10px;
+		}
+	}
+
+	&[data-hot=true] {
+		figure {
+			&:after {
+				content: '';
 			}
 		}
 	}

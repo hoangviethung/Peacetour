@@ -1,7 +1,8 @@
 import Cookie from './lib/Cookie'
 import Loading from './lib/Loading'
-import getSVG from './lib/GetSVG'
+import GetSVG from './lib/GetSVG'
 import Tab from './lib/Tab'
+import YoutubeController from './lib/YoutubeController'
 
 // SHOW BACK TO TOP
 const showBackToTop = () => {
@@ -95,6 +96,21 @@ const hotTourSlider = () => {
 		loop: false,
 		speed: 500,
 		simulateTouch: false,
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false,
+		},
+		breakpoints: {},
+	})
+}
+
+const brandSlider = () => {
+	var swiper = new Swiper('.slider-brand .swiper-container', {
+		slidesPerView: 4,
+		spaceBetween: 15,
+		loop: false,
+		speed: 500,
+		simulateTouch: false,
 		// Disable preloading of all images
 		preloadImages: false,
 		// Enable lazy loading
@@ -109,11 +125,13 @@ const hotTourSlider = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
-	getSVG();
+	GetSVG();
 	Loading();
+	YoutubeController();
 	showBackToTop();
 	showFormSearch();
 	bannerSlider();
+	brandSlider();
 	tourTypeSlider();
 	hotTourSlider();
 	const tabBlockBookTour = new Tab('.block-book-tour');

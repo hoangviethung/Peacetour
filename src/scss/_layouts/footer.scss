@@ -1,0 +1,65 @@
+footer {
+	padding-top: 15px;
+	background : map-get($mau, main);
+
+	.img {
+		img {
+			display: block;
+		}
+	}
+
+	h3 {
+		font-size  : 15px;
+		font-weight: 700;
+		color      : #fff;
+		margin     : 10px 0;
+	}
+
+	.list-info {
+		color      : #fff;
+		font-size  : 13px;
+		font-weight: 400;
+		margin-top : 10px;
+	}
+
+	.block-form {
+		.form-group {
+			margin-bottom: 10px;
+		}
+
+		label,
+		input,
+		button {
+			width: 100%;
+		}
+
+		label {
+			font-size    : 16px;
+			text-align   : center;
+			color        : #fff;
+			margin-bottom: 10px;
+		}
+
+		input {
+			color      : #fff;
+			line-height: 40px;
+			background : transparent;
+			border     : 1px solid #fff;
+			padding    : 0 20px;
+			text-align : center;
+
+			&::placeholder {
+				font-size     : 18px;
+				text-transform: uppercase;
+				color         : #fff;
+			}
+		}
+
+		button {
+			line-height     : 40px;
+			color           : #015da4;
+			border          : 1px solid #fff;
+			background-color: #fff;
+		}
+	}
+}

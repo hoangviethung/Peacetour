@@ -1,0 +1,23 @@
+.brand {
+	margin     : 40px 0 25px;
+	border-top : 1px solid #dedede;
+	padding-top: 10px;
+
+	.img {
+		height     : 60px;
+		border-left: 1px solid #dedede;
+
+		img {
+			user-select: none;
+			display    : block;
+			margin     : 0 auto;
+		}
+	}
+
+	h3 {
+		font-size     : 16px;
+		font-weight   : 700;
+		text-transform: uppercase;
+		color         : map-get($mau, main);
+	}
+}

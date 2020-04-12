@@ -1,0 +1,14 @@
+section.brand
+	.container
+		.row.ai-c
+			.col-lg-2
+				h3 công ty thành viên:
+			.col-lg-10
+				.slider-brand
+					.swiper-container
+						.swiper-wrapper
+							-for(v=1;v<6;v++)
+								.swiper-slide
+									.img.ov-h
+										img.swiper-lazy(data-src="./assets/images/brand/"+v+".png", alt="DOI-TAC-HOA-BINH")
+										.swiper-lazy-preloader.swiper-lazy-preloader-black
