@@ -13,18 +13,23 @@ html(lang="en")
 		link(rel="stylesheet", href="./css/main.min.css")
 	body
 		block loading
-		//- main content
+		// HEADER
 		block header
 			include _header.pug
-		block banner,breadcrumb
+		block banner,block-book-tour,_tour-type,breadcrumb
+		// MAIN
 		main
 			block main
 			#js-page-verify(class=bodyClass hidden)
+		// DANH SÁCH ĐỐI TÁC
+		include _brand
+		// FOOTER
 		block footer
 			include _footer.pug
-		//- end main content
+		// ĐIỆN THOẠI FIXED
 		#phone-call
 			.phone-fixed.is-animating
+		// BACK TO TOP
 		#back-top
 			img(src="./assets/icons/back-top.png")
 		//- include scripts

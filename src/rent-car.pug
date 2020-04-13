@@ -1,0 +1,16 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Du lịch Hòa Bình - Thuê Xe';
+	- let bodyClass = 'rent-car';
+
+block loading
+block banner,block-book-tour,_tour-type,breadcrumb
+	// DANH SÁCH CÁC KIỂU TOUR
+	include _templates/_layout/_tour-type
+	// Breadcrumb
+	include _templates/_layout/_breadcrumb
+block main
+	include _templates/rent-car/r-1
+	include _templates/rent-car/r-2
+block scripts

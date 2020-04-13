@@ -155,50 +155,106 @@ header {
 			display    : flex;
 			align-items: center;
 			margin-left: auto;
+		}
+
+		.item-menu-bottom {
+			position    : relative;
+			margin-right: 20px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		.link-menu-bottom {
+			position      : relative;
+			text-transform: uppercase;
+			font-size     : 14px;
+			font-weight   : 700;
+			color         : map-get($mau, main);
+			padding-bottom: 10px;
+
+			&:after {
+				content   : '';
+				position  : absolute;
+				left      : 50%;
+				transform : translateX(-50%);
+				bottom    : 0;
+				width     : 0;
+				width     : 0;
+				height    : 2px;
+				background: map-get($mau, main-2);
+				transition: .3s all ease-in-out;
+			}
+
+			@media (min-width: 1025px) {
+				&:hover {
+					&:after {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		.has-sub {
+			&:after {
+				content       : '';
+				position      : absolute;
+				bottom        : -20px;
+				left          : 0;
+				width         : 100%;
+				height        : 20px;
+				pointer-events: none;
+			}
+
+			@media (min-width: 1025px) {
+				&:hover {
+					&:after {
+						pointer-events: visible;
+					}
+
+					.sub-menu-lv1 {
+						opacity       : 1;
+						pointer-events: visible;
+					}
+				}
+			}
+		}
+
+		.sub-menu-lv1 {
+			position      : absolute;
+			width         : 200px;
+			flex-direction: column;
+			align-items   : unset;
+			left          : 50%;
+			transform     : translateX(-50%);
+			bottom        : -160px;
+			z-index       : 100;
+			padding       : 15px 0;
+			background    : map-get($mau, main);
+
+			opacity       : 0;
+			pointer-events: none;
+			transition    : .3s all ease-in-out;
 
 			.item-menu-bottom {
-				margin-right: 20px;
-
-				&:last-child {
-					margin-right: 0;
-				}
+				margin-right : 0;
+				margin-bottom: 15px;
+				padding      : 0 15px 0 30px;
 			}
 
 			.link-menu-bottom {
-				position      : relative;
-				text-transform: uppercase;
-				font-size     : 14px;
-				font-weight   : 700;
-				color         : map-get($mau, main);
-				padding-bottom: 10px;
+				color    : #fff;
+				font-size: 12px;
 
 				&:after {
-					content   : '';
-					position  : absolute;
-					left      : 50%;
-					transform : translateX(-50%);
-					bottom    : 0;
-					width     : 0;
-					width     : 0;
-					height    : 2px;
-					background: map-get($mau, main-2);
-					transition: .3s all ease-in-out;
-				}
-
-				@media (min-width: 1025px) {
-					&:hover {
-						&:after {
-							width: 100%;
-						}
-					}
+					background: #fff;
 				}
 			}
 		}
 	}
 
 	.search {
-		position: relative;
-
 		.icon-search {
 			cursor: pointer;
 		}

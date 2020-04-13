@@ -1,4 +1,4 @@
-section.index-list-tour-index
+section.list-of-products
 	.container
 		.block-title
 			.title
@@ -10,10 +10,10 @@ section.index-list-tour-index
 				// BLOCK SẢN PHẦM - DATA HOT = TRUE => XUẤT HIỆN TAG HOT
 				.item-product.col-lg-4.col-md-6(data-hot="true")
 					a(href="san-pham-chi-tiet.html")
-						figure
+						.block-item
 							.img.ov-h
 								img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+z+".jpeg", alt="TOUR-DU-LICH-HOA-BINH")
-							figcaption
+							.content
 								.box-info
 									h2 Tên Tou Du Lịch
 									.counting-days 3 ngày 2 đêm
@@ -28,10 +28,10 @@ section.index-list-tour-index
 				// BLOCK SẢN PHẦM - DATA HOT = TRUE => XUẤT HIỆN TAG HOT
 				.item-product.col-lg-4.col-md-6(data-hot="false")
 					a(href="san-pham-chi-tiet.html")
-						figure
+						.block-item
 							.img.ov-h
 								img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+x+".jpeg", alt="TOUR-DU-LICH-HOA-BINH")
-							figcaption
+							.content
 								.box-info
 									h2 Tên Tou Du Lịch
 									.counting-days 3 ngày 2 đêm

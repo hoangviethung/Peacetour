@@ -4,6 +4,14 @@ import GetSVG from './lib/GetSVG'
 import Tab from './lib/Tab'
 // import YoutubeController from './lib/YoutubeController'
 
+
+const initializationClassSubMenu = () => {
+	const itemHasSub = $('header .bottom-menu .nav-menu-bottom .item-menu-bottom').children('.nav-menu-bottom');
+	itemHasSub.addClass('sub-menu-lv1');
+	itemHasSub.parents('.item-menu-bottom').addClass('has-sub');
+}
+
+
 // SHOW BACK TO TOP
 const showBackToTop = () => {
 	$(window).scroll(function () {
@@ -104,6 +112,11 @@ const hotTourSlider = () => {
 			delay: 2000,
 			disableOnInteraction: false,
 		},
+		pagination: {
+			el: '.slider-hot-tour .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
 		breakpoints: {
 			768: {
 				slidesPerView: 3,
@@ -137,10 +150,64 @@ const brandSlider = () => {
 	})
 }
 
+const showRating = () => {
+	$('.rate[data-rate]').each(function () {
+
+		var numberStart = $(this).attr('data-rate');
+
+		if (numberStart == 5) {
+			$(this).find(".img-star .star-rated").width("100%");
+		} else if (numberStart == 4) {
+			$(this).find(".img-star .star-rated").width("80%");
+		} else if (numberStart == 3) {
+			$(this).find(".img-star .star-rated").width("60%");
+		} else if (numberStart == 2) {
+			$(this).find(".img-star .star-rated").width("40%");
+		} else if (numberStart == 1) {
+			$(this).find(".img-star .star-rated").width("20%");
+		}
+	})
+
+	$('.rate[data-rate]').each(function () {
+
+		var numberStart = $(this).attr('data-rate');
+
+		if (numberStart == 5) {
+			$(this).find(".img-star .star-rated").width("100%");
+		} else if (numberStart == 4) {
+			$(this).find(".img-star .star-rated").width("80%");
+		} else if (numberStart == 3) {
+			$(this).find(".img-star .star-rated").width("60%");
+		} else if (numberStart == 2) {
+			$(this).find(".img-star .star-rated").width("40%");
+		} else if (numberStart == 1) {
+			$(this).find(".img-star .star-rated").width("20%");
+		}
+	})
+
+	$('.rate[data-rate]').each(function () {
+
+		var numberStart = $(this).attr('data-rate');
+
+		if (numberStart == 5) {
+			$(this).find(".img-star .star-rated").width("100%");
+		} else if (numberStart == 4) {
+			$(this).find(".img-star .star-rated").width("80%");
+		} else if (numberStart == 3) {
+			$(this).find(".img-star .star-rated").width("60%");
+		} else if (numberStart == 2) {
+			$(this).find(".img-star .star-rated").width("40%");
+		} else if (numberStart == 1) {
+			$(this).find(".img-star .star-rated").width("20%");
+		}
+	})
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
 	GetSVG();
 	Loading();
+	initializationClassSubMenu();
 	// YoutubeController();
 	showBackToTop();
 	showFormSearch();
@@ -148,5 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	brandSlider();
 	tourTypeSlider();
 	hotTourSlider();
+	showRating();
 	const tabBlockBookTour = new Tab('.block-book-tour');
 })

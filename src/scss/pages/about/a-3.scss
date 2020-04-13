@@ -1,0 +1,98 @@
+.service-intro {
+	margin-top    : 50px;
+	padding-bottom: 50px;
+
+	.content {
+		max-height: 365px;
+		overflow  : auto;
+
+		h2 {
+			font-size    : 28px;
+			color        : map-get($mau, main);
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-size    : 18px;
+			margin-bottom: 1rem;
+		}
+
+		ul {
+			li {
+				position     : relative;
+				font-size    : 16px;
+				margin-bottom: 10px;
+				padding-left : 30px;
+
+				&:after {
+					content      : '';
+					position     : absolute;
+					width        : 10px;
+					height       : 10px;
+					left         : 0;
+					top          : 7px;
+					border-radius: 50%;
+					background   : map-get($mau, main);
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.img {
+		height: 365px;
+	}
+
+	&:nth-child(3) {
+		border-bottom: 1px solid #dddddd;
+	}
+
+	@media (max-width: 1024.98px) {
+		.content {
+			max-height: 250px;
+
+			h2 {
+				font-size: 18px;
+			}
+
+			p {
+				font-size: 14px;
+			}
+
+			ul {
+				li {
+					font-size    : 14px;
+					margin-bottom: 5px;
+					padding-left : 20px;
+
+					&:after {
+						width : 5px;
+						height: 5px;
+					}
+				}
+			}
+		}
+
+		.img {
+			height: 250px;
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		.content {
+			max-height: 100%;
+			margin-top: 25px;
+		}
+
+		&:nth-child(3) {
+			.col-sm-6 {
+				&:first-child {
+					order: 2;
+				}
+			}
+		}
+	}
+}

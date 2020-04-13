@@ -1,16 +1,19 @@
 extends _templates/_layout/_layout.pug
 
 block var
-	- let title = 'Page | Index';
+	- let title = 'Du lịch Hòa Bình - Peace Tour';
 	- let bodyClass = 'index-page';
 
 block loading
 	include _templates/_layout/_loading
-block banner,breadcrumb
-	include ./_templates/_layout/_banner
-block main
+block banner,block-book-tour,_tour-type,breadcrumb
+	// BANNER
+	include _templates/_layout/_banner
+	// BLOCK FORM BOOK TOUR
 	include _templates/_layout/_block-book-tour
+	// DANH SÁCH CÁC KIỂU TOUR
 	include _templates/_layout/_tour-type
+block main
 	// DANH SÁCH TOUR NỔI BẬT
 	include _templates/index/i-1
 	// DANH SÁCH TOUR TRONG NƯỚC
@@ -21,6 +24,4 @@ block main
 	include _templates/index/i-4
 	// DANH SÁCH TIN TỨC
 	include _templates/index/i-5
-	// DANH SÁCH ĐỐI TÁC
-	include _templates/_layout/_brand
 block scripts

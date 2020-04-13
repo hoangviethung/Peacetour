@@ -1,0 +1,44 @@
+section.list-of-products
+	.container
+		.block-title
+			.title
+				h2.lcl.lcl-1 TÊN DANH SÁCH
+			.desc
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, deserunt! Illum explicabo et dolores, quo dolorem quaerat at itaque laborum saepe quia debitis tenetur rerum officiis impedit earum praesentium dolore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum necessitatibus possimus laboriosam nihil maxime ut corporis ipsa culpa unde animi? Consectetur molestiae ipsum ipsam, dignissimos hic quidem quis deleniti excepturi?
+		.row.list-item
+			-for(i=1;i<4;i++)
+				// BLOCK SẢN PHẦM - DATA HOT = TRUE => XUẤT HIỆN TAG HOT
+				.item-product.col-lg-4.col-sm-6(data-hot="true")
+					a(href="san-pham-chi-tiet.html")
+						.block-item
+							.img.ov-h
+								img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+i+".jpg", alt="TOUR-DU-LICH-HOA-BINH")
+							.content
+								.box-info
+									h2 Tên Tou Du Lịch
+									.counting-days 3 ngày 2 đêm
+									.mode-of-transport
+										.item
+											img.lazyload.blur-up(data-src="./assets/icons/car.png", alt="CART")
+										.item
+											img.lazyload.blur-up(data-src="./assets/icons/airplan.png", alt="AIRPLAN")
+									time 17/04/2020
+									.price 2,375,000 VNĐ
+			-for(j=7;j<12;j++)
+				// BLOCK SẢN PHẦM - DATA HOT = TRUE => XUẤT HIỆN TAG HOT
+				.item-product.col-lg-4.col-sm-6(data-hot="false")
+					a(href="san-pham-chi-tiet.html")
+						.block-item
+							.img.ov-h
+								img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+j+".jpeg", alt="TOUR-DU-LICH-HOA-BINH")
+							.content
+								.box-info
+									h2 Tên Tou Du Lịch
+									.counting-days 3 ngày 2 đêm
+									.mode-of-transport
+										.item
+											img.lazyload.blur-up(data-src="./assets/icons/car.png", alt="CART")
+										.item
+											img.lazyload.blur-up(data-src="./assets/icons/airplan.png", alt="AIRPLAN")
+									time 17/04/2020
+									.price 2,375,000 VNĐ

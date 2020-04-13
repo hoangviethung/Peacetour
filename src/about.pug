@@ -1,0 +1,19 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Du lịch Hòa Bình - Về Chúng Tôi';
+	- let bodyClass = 'about';
+
+block loading
+block banner,block-book-tour,_tour-type,breadcrumb
+	// BANNER
+	include _templates/_layout/_banner
+	// BLOCK FORM BOOK TOUR
+	include _templates/_layout/_block-book-tour
+	// DANH SÁCH CÁC KIỂU TOUR
+	include _templates/_layout/_tour-type
+block main
+	include _templates/about/a-1
+	include _templates/about/a-2
+	include _templates/about/a-3
+block scripts

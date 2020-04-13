@@ -1,0 +1,20 @@
+section.list-of-products
+	.container
+		.block-title.color-blue
+			.title
+				h2.lcl.lcl-1 CHO THUÊ XE
+			.row.list-item
+				-for(i=18;i<24;i++)
+					// BLOCK SẢN PHẦM - DATA HOT = TRUE => XUẤT HIỆN TAG HOT
+					.item-product.col-lg-4.col-sm-6(data-hot="false")
+						a(href="san-pham-chi-tiet.html")
+							.block-item
+								.img.ov-h
+									img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+i+".jpeg", alt="XE-DU-LICH-HOA-BINH")
+								.content
+									.box-info
+										h2 Tên Xe Cho Thuê
+										.car-seat Chỗ ngồi: 
+											span 7 chỗ
+										.car-brand Hiệu xe: 
+											span Huyndai

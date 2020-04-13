@@ -1,0 +1,15 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Du lịch Hòa Bình - Thông Dịch Viên';
+	- let bodyClass = 'interpreter';
+
+block loading
+block banner,block-book-tour,_tour-type,breadcrumb
+	// DANH SÁCH CÁC KIỂU TOUR
+	include _templates/_layout/_tour-type
+	// Breadcrumb
+	include _templates/_layout/_breadcrumb
+block main
+	include _templates/interpreter/i-1
+block scripts

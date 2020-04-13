@@ -1,7 +1,7 @@
 .list-tour-type {
 	margin: 50px 0;
 
-	figure {
+	.block-item {
 		img {
 			display: block;
 			width  : 60px;
@@ -9,7 +9,7 @@
 			margin : 0 auto;
 		}
 
-		figcaption {
+		.content {
 			margin-top: 10px;
 
 			p {

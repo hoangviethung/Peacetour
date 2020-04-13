@@ -1,4 +1,4 @@
-section.index-list-tour-index
+section.list-of-products
 	.container
 		.block-title
 			.title
@@ -10,7 +10,7 @@ section.index-list-tour-index
 				// BLOCK SẢN PHẦM - DATA HOT = TRUE => XUẤT HIỆN TAG HOT
 				.item-product.col-lg-4.col-sm-6(data-hot="true")
 					a(href="san-pham-chi-tiet.html")
-						figure
+						.block-item
 							.img.ov-h
 								img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+j+".jpg", alt="TOUR-DU-LICH-HOA-BINH")
 							figcaption
@@ -28,7 +28,7 @@ section.index-list-tour-index
 				// BLOCK SẢN PHẦM - DATA HOT = TRUE => XUẤT HIỆN TAG HOT
 				.item-product.col-lg-4.col-sm-6(data-hot="false")
 					a(href="san-pham-chi-tiet.html")
-						figure
+						.block-item
 							.img.ov-h
 								img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+h+".jpg", alt="TOUR-DU-LICH-HOA-BINH")
 							figcaption

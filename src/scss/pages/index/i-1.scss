@@ -2,7 +2,9 @@
 	margin: 50px 0;
 
 	.slider-hot-tour {
-		margin-top: 45px;
+		position      : relative;
+		margin-top    : 45px;
+		padding-bottom: 50px;
 
 		.item-hot-tour {
 			&:nth-child(2n) {
@@ -119,6 +121,34 @@
 				}
 			}
 		}
+
+		.swiper-pagination {
+			position : absolute;
+			left     : 50%;
+			transform: translateX(-50%);
+			bottom   : 0;
+
+			.swiper-pagination-bullet {
+				width           : 15px;
+				height          : 15px;
+				border          : 5px solid map-get($mau, main);
+				opacity         : 1;
+				border-radius   : 50%;
+				background-color: map-get($mau, main);
+				transition      : all .2s ease-in-out;
+				margin          : 0 15px;
+
+				&.swiper-pagination-bullet-active {
+					background-color: #fff;
+				}
+			}
+		}
+
+		// @media (max-width: 767.98px) {
+		// 	.swiper-pagination {
+		// 		display: none;
+		// 	}
+		// }
 	}
 
 	@media (max-width: 1024.98px) {

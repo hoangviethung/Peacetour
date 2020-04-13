@@ -1,0 +1,15 @@
+section.list-of-products
+	.container
+		.block-title.color-blue.text-left
+			.title
+				h2.lcl.lcl-1 DANH SÁCH HƯỚNG DẪN HỘ CHIẾU
+			.row.list-item
+				-for(i=1;i<10;i++)
+					.item-product.col-lg-4.col-sm-6(data-hot="false")
+						a(href="san-pham-chi-tiet.html")
+							.block-item
+								.img.ov-h
+									img.ofcv.lazyload.blur-up(data-src="./assets/images/passport-visa/"+i+".jpeg", alt="PASSPORT-VISA")
+								.content
+									.box-info
+										h2 Tên Visa - Passport
