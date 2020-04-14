@@ -4,90 +4,75 @@ let map,
 	infoWindow,
 	markers = []
 let locationsInput = locationsInput || []
-let google = google || {}
+// let google = google || {}
 let mapOption = {
 	gestureHandling: 'cooperative',
 	zoom: 12,
-	styles: [
-		{
-			featureType: 'administrative',
-			elementType: 'labels.text.fill',
-			stylers: [
-				{
-					color: '#444444',
-				},
-			],
-		},
-		{
-			featureType: 'landscape',
-			elementType: 'all',
-			stylers: [
-				{
-					color: '#f2f2f2',
-				},
-			],
-		},
-		{
-			featureType: 'poi',
-			elementType: 'all',
-			stylers: [
-				{
-					visibility: 'off',
-				},
-			],
-		},
-		{
-			featureType: 'road',
-			elementType: 'all',
-			stylers: [
-				{
-					saturation: -100,
-				},
-				{
-					lightness: 45,
-				},
-			],
-		},
-		{
-			featureType: 'road.highway',
-			elementType: 'all',
-			stylers: [
-				{
-					visibility: 'simplified',
-				},
-			],
-		},
-		{
-			featureType: 'road.arterial',
-			elementType: 'labels.icon',
-			stylers: [
-				{
-					visibility: 'off',
-				},
-			],
-		},
-		{
-			featureType: 'transit',
-			elementType: 'all',
-			stylers: [
-				{
-					visibility: 'off',
-				},
-			],
-		},
-		{
-			featureType: 'water',
-			elementType: 'all',
-			stylers: [
-				{
-					color: '#0c6db5',
-				},
-				{
-					visibility: 'on',
-				},
-			],
-		},
-	],
+	// styles: [{
+	// 		featureType: 'administrative',
+	// 		elementType: 'labels.text.fill',
+	// 		stylers: [{
+	// 			color: '#444444',
+	// 		}, ],
+	// 	},
+	// 	{
+	// 		featureType: 'landscape',
+	// 		elementType: 'all',
+	// 		stylers: [{
+	// 			color: '#f2f2f2',
+	// 		}, ],
+	// 	},
+	// 	{
+	// 		featureType: 'poi',
+	// 		elementType: 'all',
+	// 		stylers: [{
+	// 			visibility: 'off',
+	// 		}, ],
+	// 	},
+	// 	{
+	// 		featureType: 'road',
+	// 		elementType: 'all',
+	// 		stylers: [{
+	// 				saturation: -100,
+	// 			},
+	// 			{
+	// 				lightness: 45,
+	// 			},
+	// 		],
+	// 	},
+	// 	{
+	// 		featureType: 'road.highway',
+	// 		elementType: 'all',
+	// 		stylers: [{
+	// 			visibility: 'simplified',
+	// 		}, ],
+	// 	},
+	// 	{
+	// 		featureType: 'road.arterial',
+	// 		elementType: 'labels.icon',
+	// 		stylers: [{
+	// 			visibility: 'off',
+	// 		}, ],
+	// 	},
+	// 	{
+	// 		featureType: 'transit',
+	// 		elementType: 'all',
+	// 		stylers: [{
+	// 			visibility: 'off',
+	// 		}, ],
+	// 	},
+	// 	{
+	// 		featureType: 'water',
+	// 		elementType: 'all',
+	// 		stylers: [{
+	// 				color: '#0c6db5',
+	// 			},
+	// 			{
+	// 				visibility: 'on',
+	// 			},
+	// 		],
+	// 	},
+	// ],
 }
 
 const addMarkers = () => {
@@ -110,7 +95,7 @@ const addMarkers = () => {
 }
 
 const showInfoMarkerOnMap = (marker, index) => {
-	google.maps.event.addListener(marker, 'click', function() {
+	google.maps.event.addListener(marker, 'click', function () {
 		infoWindow.setContent(`
 				<h3>${locationsInput[index].title}</h3>
 				<p>${locationsInput[index].address}</p>
@@ -120,7 +105,7 @@ const showInfoMarkerOnMap = (marker, index) => {
 		map.panTo(marker.getPosition())
 		map.setZoom(12)
 	})
-	google.maps.event.addListener(map, 'click', function() {
+	google.maps.event.addListener(map, 'click', function () {
 		infoWindow.close()
 	})
 }
@@ -160,6 +145,8 @@ const initialize = () => {
 }
 
 if (MapDOM) {
+	console.log(google.maps);
+	
 	google.maps.event.addDomListener(window, 'load', initialize)
 	if (BranchListDOM) {
 		getLocationList()

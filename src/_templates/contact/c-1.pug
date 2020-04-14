@@ -41,3 +41,30 @@ section.contact
 			.item-phone-number.col-md-6
 				p Tàu cao tốc - tàu phà
 				span 0917 603 089
+		.block-form
+			form(action="#")
+				.form-row
+					.form-group.col-md-6
+						label
+							input.input-validation-error(type="text" placeholder="Họ tên *")
+						span.field-validation-error
+							span Contact_Name_Required
+					.form-group.col-md-6
+						label
+							input.input-validation-error(type="text" placeholder="Số điện thoại *")
+						span.field-validation-error
+							span Contact_Name_Required
+					.form-group.col-md-12
+						label
+							input.input-validation-error(type="text" placeholder="Thư điện tử *")
+						span.field-validation-error
+							span Contact_Name_Required
+					.form-group.col-md-12
+						label
+							textarea.input-validation-error(name="", cols="30", rows="10" placeholder="Nội dung *")
+						span.field-validation-error
+							span Contact_Name_Required
+					.form-group.col-md-12
+						button.btn.btn-submit-2 GỬI
+	// GOOGLE MAP
+	#map

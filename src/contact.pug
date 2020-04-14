@@ -13,3 +13,14 @@ block banner,block-book-tour,_tour-type,breadcrumb
 block main
 	include _templates/contact/c-1
 block scripts
+	script.
+		var locationsInput = [
+			{
+				lat: 10.777053,
+				lng: 106.690405,
+				title: 'CÔNG TY CỔ PHẦN DU LỊCH HÒA BÌNH VIỆT NAM',
+				address: '60 Võ Văn Tần, Phường 6, Quận 3, TP.HCM, Việt Nam',
+				phone: '(+84) 28 730 69 888'
+			}
+		]
+	script(src="./js/GoogleMapController.min.js")
