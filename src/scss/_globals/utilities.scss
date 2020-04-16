@@ -232,6 +232,116 @@
 	}
 }
 
+#hot-line-popup {
+	max-width: 1000px;
+	width    : 100%;
+
+	.block-hot-line {
+		.block-title {
+			display        : flex;
+			justify-content: center;
+			align-items    : center;
+			background     : map-get($mau, main);
+			color          : #fff;
+			text-transform : uppercase;
+			height         : 80px;
+
+			h2 {
+				border-bottom: 1px dotted #ffffff;
+				font-weight  : 400;
+			}
+		}
+
+		.block-content {
+			margin: 25px 0;
+
+			.item-phone-number {
+				padding      : 20px 0;
+				text-align   : center;
+				border-right : 1px solid map-get($mau, main);
+				border-bottom: 1px dotted map-get($mau, main);
+
+				&:nth-child(3n+1) {
+					border-left: 1px solid map-get($mau, main);
+				}
+
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3) {
+					border-top: 1px solid map-get($mau, main);
+				}
+
+				p {
+					color      : map-get($mau, main-2);
+					font-size  : 30px;
+					font-weight: 700;
+					display    : block;
+				}
+
+				span {
+					font-size : 18px;
+					font-style: italic;
+					color     : map-get($mau, main);
+				}
+			}
+		}
+	}
+}
+
+#login-register-popup {
+	max-width: 500px;
+	width    : 100%;
+
+	.block-login-register {
+		display  : flex;
+		flex-wrap: wrap;
+
+		.item {
+			-ms-flex        : 0 0 100%;
+			-webkit-box-flex: 0;
+			flex            : 0 0 100%;
+			max-width       : 100%;
+			margin-bottom   : 15px;
+		}
+
+		.btn {
+			text-transform: uppercase;
+			width         : 100%;
+		}
+	}
+}
+
+.fancybox-slide--html {
+	.fancybox-content {
+		overflow: unset;
+
+		@media (max-width: 767.98px) {
+			overflow: hidden;
+		}
+	}
+
+	.fancybox-close-small {
+		width     : 40px;
+		height    : 40px;
+		top       : -20px;
+		right     : -20px;
+		background: black;
+		opacity   : 1;
+		padding   : 5px;
+
+		svg {
+			path {
+				fill: white;
+			}
+		}
+
+		@media (max-width: 767.98px) {
+			top  : 0;
+			right: 0;
+		}
+	}
+}
+
 .tab-container {
 	.list-tab {
 		.item {
@@ -727,7 +837,23 @@
 		position: relative;
 
 		.img {
-			height: 240px;
+			position: relative;
+			height  : 240px;
+
+			&.isVideo {
+				&:after {
+					content         : '';
+					position        : absolute;
+					top             : 50%;
+					left            : 50%;
+					width           : 74px;
+					height          : 74px;
+					transform       : translate(-50%, -50%);
+					background-image: url(../assets/icons/btn-play.png);
+					background-size : cover;
+					pointer-events  : none;
+				}
+			}
 		}
 
 		.content {

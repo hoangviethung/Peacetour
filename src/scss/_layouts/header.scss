@@ -67,9 +67,13 @@ header {
 
 		.hot-line,
 		.user-login {
-			display     : flex;
-			align-items : center;
-			margin-right: 25px;
+			>a {
+				cursor      : pointer;
+				user-select : none;
+				display     : flex;
+				align-items : center;
+				margin-right: 25px;
+			}
 
 			.text {
 				font-size   : 14px;

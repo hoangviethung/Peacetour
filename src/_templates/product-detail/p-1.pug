@@ -1,0 +1,49 @@
+section.product-overview
+	.container
+		.row
+			.col-lg-5
+				.slider-product-detail
+					.slider-preview
+						.swiper-container
+							.swiper-wrapper
+								-for(i=1;i<7;i++)
+									.swiper-slide
+										.img.ov-h
+											img.ofcv(src="./assets/images/product-detail/"+i+".jpeg", alt="")
+					.slider-thumbnail
+						.swiper-container
+							.swiper-wrapper
+								-for(j=1;j<7;j++)
+									.swiper-slide
+										.img.ov-h
+											img.ofcv(src="./assets/images/product-detail/"+j+".jpeg", alt="")
+						.swiper-button-prev
+						.swiper-button-next
+			.col-lg-7
+				.information-overview
+					h1 BUÔN MA THUỘT
+					.list-information
+						.item-information
+							p Mã tour: 
+								span HBI-BMT-170420-3N-XE
+						.item-information
+							p.cl-red Chọn ngày khác
+						.item-information
+							p Khởi hành: 
+								span 17/04/2020
+						.item-information
+							p Thời gian: 
+								span 3 ngày 2 đêm
+						.item-information
+							p Nơi khởi hành: 
+								span Hồ Chí Minh
+						.item-information
+							p Số chỗ còn nhận: 
+								span 40/40
+						.item-information.detail
+							p.view 343
+							p.like 0
+							p.comment 0
+					.box-booking
+						.price 2,375,000 VNĐ/khách
+						a(href="#").btn.btn-submit đặt ngay

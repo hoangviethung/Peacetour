@@ -1,0 +1,37 @@
+section.list-of-products
+	.container
+		.block-title.color-blue
+			.title
+				h2.lcl.lcl-1 HÌNH ẢNH
+			.row.list-item
+				-for(i=1;i<7;i++)
+					// BLOCK SẢN PHẦM - DATA HOT = TRUE => XUẤT HIỆN TAG HOT
+					.item-product.item-library-images.col-lg-4.col-sm-6(data-hot="false")
+						// HREF THẺ "a" NÀY SẼ ĐƯỢC SET = "src" của IMAGE THUMBNAIL
+						// DATA-FANCYBOX SẼ ĐƯỢC SET BẰNG TÊN CỦA ALBUM => BỎ DẤU
+						a(data-fancybox="#" href="./assets/images/library-site/thumbnail/"+i+".jpg")
+							.block-item
+								.img.ov-h
+									img.ofcv.lazyload.blur-up(data-src="./assets/images/library-site/thumbnail/"+i+".jpg", alt="THU-VIEN-HINH-ANH")
+								.content
+									.box-info
+										h2 Tên Album Hình Ảnh
+						//LIST GALLERY IMAGES
+						.d-n
+							-for(j=1;j<7;j++)
+								a(data-fancybox="#" href="./assets/images/library-site/thumbnail/"+j+".jpg")
+									img(src="./assets/images/library-site/thumbnail/"+j+".jpg", alt="THU-VIEN-HINH-ANH")
+		.block-title.color-blue
+			.title
+				h2.lcl.lcl-1 VIDEOS
+			.row.list-item
+				-for(i=1;i<7;i++)
+					// BLOCK SẢN PHẦM - DATA HOT = TRUE => XUẤT HIỆN TAG HOT
+					.item-product.col-lg-4.col-sm-6(data-hot="false")
+						a(data-fancybox href="https://www.youtube.com/watch?v=_jQSP0y32Rk&feature=emb_title")
+							.block-item
+								.img.ov-h.isVideo
+									img.ofcv.lazyload.blur-up(data-src="./assets/images/library-site/thumbnail/"+i+".jpg", alt="THU-VIEN-HINH-ANH")
+								.content
+									.box-info
+										h2 Tên Album Hình Ảnh

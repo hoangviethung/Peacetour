@@ -65,6 +65,10 @@
 			height    : 35px;
 			width     : 100%;
 			padding   : 0 5px;
+
+			&.date-picker {
+				width: 100% !important;
+			}
 		}
 
 		input[type="text"] {

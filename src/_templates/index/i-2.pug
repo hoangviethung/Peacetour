@@ -9,7 +9,7 @@ section.list-of-products
 			-for(j=1;j<4;j++)
 				// BLOCK SẢN PHẦM - DATA HOT = TRUE => XUẤT HIỆN TAG HOT
 				.item-product.col-lg-4.col-sm-6(data-hot="true")
-					a(href="san-pham-chi-tiet.html")
+					a(href="product-detail.html")
 						.block-item
 							.img.ov-h
 								img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+j+".jpg", alt="TOUR-DU-LICH-HOA-BINH")
@@ -27,7 +27,7 @@ section.list-of-products
 			-for(h=4;h<7;h++)
 				// BLOCK SẢN PHẦM - DATA HOT = TRUE => XUẤT HIỆN TAG HOT
 				.item-product.col-lg-4.col-sm-6(data-hot="false")
-					a(href="san-pham-chi-tiet.html")
+					a(href="product-detail.html")
 						.block-item
 							.img.ov-h
 								img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+h+".jpg", alt="TOUR-DU-LICH-HOA-BINH")
@@ -42,4 +42,4 @@ section.list-of-products
 											img.lazyload.blur-up(data-src="./assets/icons/airplan.png", alt="AIRPLAN")
 									time 17/04/2020
 									.price 2,375,000 VNĐ
-		a(url="danh-sach-san-pham.html").btn.btn-view-more Xem thêm
+		a(href="products-1.html").btn.btn-view-more Xem thêm

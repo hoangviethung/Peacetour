@@ -12,17 +12,19 @@ header
 					li.item-menu-top
 						a.link-menu-top(href="contact.html") Liên hệ
 					li.item-menu-top
-						a.link-menu-top(href="library.html") Thư viện
+						a.link-menu-top(href="library-site.html") Thư viện
 				// ĐƯỜNG DÂY NÓNG
 				.hot-line
-					.icon
-						img(src="./assets/icons/phone-menu-top.png" alt="HOT-LINE")
-					.text Hotline
+					a(data-fancybox data-src="#hot-line-popup" href="javascript:;")
+						.icon
+							img(src="./assets/icons/phone-menu-top.png" alt="HOT-LINE")
+						.text Hotline
 				// ĐĂNG KÝ - ĐĂNG NHẬP
 				.user-login
-					.icon
-						img(src="./assets/icons/user-menu-top.png" alt="LOGIN")
-					.text Tài khoản
+					a(data-fancybox data-src="#login-register-popup" href="javascript:;")
+						.icon
+							img(src="./assets/icons/user-menu-top.png" alt="LOGIN")
+						.text Tài khoản
 				// NGÔN NGỮ
 				.language
 					ul.list-language
