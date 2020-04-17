@@ -1,5 +1,5 @@
 .product-overview {
-	margin: 50px 0;
+	padding: 50px 0;
 
 	.slider-product-detail {
 
@@ -139,7 +139,7 @@
 					&.address {
 						padding-left: 30px;
 
-						&:afteR {
+						&:after {
 							content          : '';
 							position         : absolute;
 							left             : 0;
@@ -225,6 +225,90 @@
 			color    : map-get($mau, main-2);
 			border   : 1px dashed map-get($mau, main);
 			padding  : 4px 1em;
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		.information-overview {
+			.price {
+				font-size: 18px;
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		.information-overview {
+			.list-information {
+				margin-top: 10px;
+
+				.item-information {
+					margin-bottom: 5px;
+				}
+			}
+
+			.box-booking {
+				margin-top: 5px;
+			}
+
+			.price {
+				flex     : 0 0 100%;
+				max-width: 100%;
+			}
+
+			.btn-submit {
+				flex       : 0 0 100%;
+				max-width  : 50%;
+				margin-top : 10px;
+				margin-left: unset;
+			}
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		padding: 25px 0;
+
+		.slider-product-detail {
+			.slider-thumbnail {
+				position  : relative;
+				margin-top: 10px;
+				padding   : 0 25px;
+
+				.img {
+					height: 100px;
+				}
+			}
+		}
+
+		.information-overview {
+			margin-top: 25px;
+
+			h1 {
+				font-size: 18px;
+			}
+
+			.list-information {
+				.item-information {
+					margin-bottom: 5px;
+
+					.link-color-red {
+						font-size: 14px;
+					}
+
+					p {
+						font-size: 14px;
+
+						+p {
+							margin-top: 5px;
+						}
+
+						&.address {
+							&:after {
+								top: 0;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

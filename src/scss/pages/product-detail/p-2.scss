@@ -468,3 +468,193 @@
 		}
 	}
 }
+
+@media (max-width: 1024.98px) {
+	.product-information-detail {
+
+		.other-products {
+			padding-top: 25px;
+
+			.other-product__item {
+				margin-top   : 0;
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	.block-form-booking-detail {
+		.form-group {
+			.date-picker {
+				max-width: 30%;
+			}
+		}
+	}
+}
+
+@media (max-width: 767.98px) {
+	.tab-container {
+		padding-bottom: 25px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.pid-tab-items {
+		.item {
+			font-size: 12px;
+
+			+.item {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.tour-detail {
+		+.tour-detail {
+			margin-top: 15px;
+		}
+
+		.item__title {
+			h2 {
+				font-size: 16px;
+			}
+		}
+
+		.item__content {
+
+			ul,
+			p {
+				color    : #5d5d5d;
+				font-size: 14px;
+
+				+p,
+				+ul {
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+
+	.note-tour {
+		margin-bottom: 15px;
+
+		.item__title {
+			h2 {
+				font-size: 16px;
+			}
+		}
+
+		.item__content {
+
+			ul,
+			p {
+				color    : #5d5d5d;
+				font-size: 14px;
+
+				li {
+					+li {
+						margin-top: 5px;
+					}
+				}
+			}
+		}
+	}
+
+	.comments-product {
+		.header__comment {
+			p {
+				font-size: 16px;
+			}
+		}
+
+		.input__comment {
+			input {
+				font-size  : 14px;
+				line-height: 35px;
+			}
+
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.content__detail-normal {
+		.item__title {
+			margin: 10px 0;
+
+			.icon-hotel {
+				position: relative;
+
+				img {
+					margin: 5px 0;
+				}
+			}
+
+			h2 {
+				font-size : 16px;
+				text-align: left;
+			}
+		}
+
+		.item__content {
+
+			ul,
+			p,
+			b,
+			span {
+				font-size: 14px;
+
+				+p {
+					margin-top: 5px;
+				}
+
+				li {
+					+li {
+						margin-top: 5px;
+					}
+				}
+			}
+		}
+	}
+
+	.block-form-booking-detail {
+		.form-group {
+			label {
+				flex         : 0 0 100%;
+				max-width    : 100%;
+				font-size    : 14px;
+				margin-bottom: 10px;
+			}
+
+			input {
+				-ms-flex        : 0 0 100%;
+				-webkit-box-flex: 0;
+				flex            : 0 0 100%;
+				max-width       : 100%;
+			}
+
+			textarea {
+				height    : 150px;
+				margin-top: 0;
+			}
+
+			p {
+				font-size: 14px;
+			}
+
+			.date-picker {
+				max-width: 100%;
+			}
+		}
+
+		.item__title {
+			position: relative;
+			margin  : 25px 0;
+
+			h2 {
+				font-size: 16px;
+				max-width: 70%;
+			}
+		}
+	}
+}
