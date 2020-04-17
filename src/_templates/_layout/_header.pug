@@ -60,21 +60,26 @@ header
 					li.item-menu-bottom
 						a.link-menu-bottom(href="ship.html") tàu hòa bình
 					li.item-menu-bottom
-						a.link-menu-bottom(href="orther-sevice.html") dịch vụ khác
+						a.link-menu-bottom(href="other-services.html") dịch vụ khác
 						ul.nav-menu-bottom
 							li.item-menu-bottom
+								.icon
+									img.lazyload.blur-up(data-src="./assets/icons/icon-sub-menu-1.png", alt="")
 								a.link-menu-bottom(href="make-passport-visa.html") làm hộ chiếu visa
 							li.item-menu-bottom
+								.icon
+									img.lazyload.blur-up(data-src="./assets/icons/icon-sub-menu-2.png", alt="")
 								a.link-menu-bottom(href="event-organization.html") tổ chức sự kiện
 							li.item-menu-bottom
+								.icon
+									img.lazyload.blur-up(data-src="./assets/icons/icon-sub-menu-3.png", alt="")
 								a.link-menu-bottom(href="interpreter.html") thông dịch viện
 					li.item-menu-bottom.search
 						.icon-search
 							img.lazyload.blur-up(data-src="./assets/icons/search-icon.png", alt="SEARCH")
 						.block-form-search
-							form(action="#", method="get")
+							form(action="#", method="POST")
 								.form-group
-									label.d-n(for="#")
-									input(type="text", name="" placeholder="Nhập để tìm kiếm...")
-									button
-										img.lazyload.blur-up(data-src="./assets/icons/search-icon.png", alt="SEARCH")
+									label
+										input(type="text", name="" placeholder="Nhập để tìm kiếm...")
+										button Tìm

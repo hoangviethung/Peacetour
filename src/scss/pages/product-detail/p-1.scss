@@ -163,7 +163,8 @@
 						&.view,
 						&.like,
 						&.comment {
-							position: relative;
+							position  : relative;
+							margin-top: 0;
 
 							&:after {
 								content          : '';

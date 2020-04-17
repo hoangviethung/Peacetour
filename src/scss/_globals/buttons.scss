@@ -54,6 +54,20 @@
 		}
 	}
 
+	&-bg-white {
+		width           : 100px;
+		height          : 35px;
+		background-color: #fff;
+		color           : #5d5d5d;
+		font-size       : 17px;
+		cursor          : pointer;
+
+		@media (max-width: 1024.98px) {
+			font-size: 14px;
+			width    : 75px;
+		}
+	}
+
 	&-view-more {
 		cursor          : pointer;
 		padding         : 8px 25px 8px 25px;

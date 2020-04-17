@@ -3,37 +3,107 @@ section.product-information-detail
 		.row
 			.col-lg-9.tab-container
 				.list-tab.pid-tab-items.d-f
-					.item.tt-u.fw-700(toggle-for="1") sảnh tiệc
-					.item.tt-u.fw-700(toggle-for="2") thực đơn
-					.item.tt-u.fw-700(toggle-for="3") dịch vụ
-					.item.tt-u.fw-700(toggle-for="4") khuyến mãi
+					.item.tt-u.fw-700(toggle-for="1") thông tin
 				.tab-content.pid__tab-contents
 					.content(tab-id="1")
+						.block-table__rent-car-detail
+							table
+								thead
+									tr
+										th LỘ TRÌNH
+										th THỜI GIAN
+										th GIÁ (VND)
+								tbody
+									tr
+										td SÂN BAY
+										td 03H
+										td 940,000
+									tr
+										td NỘI THÀNH
+										td 1/2 NGÀY
+										td 1,020,000
+									tr
+										td NỘI THÀNH
+										td 1 NGÀY
+										td 1,770,000
+									tr
+										td CỦ CHI/ĐẠI NAM
+										td 5-6 GIỜ
+										td 2,350,000
+									tr
+										td CẦN GIỜ/ MỸ THO
+										td 1 NGÀY
+										td 2,640,000
+									tr
+										td TÂY NINH ( TÒA THÁNH, NÚI BÀ)
+										td 1 NGÀY
+										td 3,360,000
+									tr
+										td TÂY NINH - CỦ CHI
+										td 1 NGÀY
+										td 3,600,000
+									tr
+										td MỸ THO - TP.BẾN TRE
+										td 1 NGÀY
+										td 3,000,000
+									tr
+										td CÁI BÈ
+										td 1 NGÀY
+										td 3,600,000
+									tr
+										td CÁI BÈ - VĨNH LONG
+										td 1 NGÀY
+										td 4,200,000
 						.content__detail-normal
 							.item__content
-								p Tọa lạc tại Trung tâm thị trấn Dương Đông, nằm trong khu liên hợp của Hòa Bình – Phú Quốc Resort, nhà hàng Hòa Bình được xem là địa điểm thuận tiện nhất cho những buổi tiệc cưới hay hội nghị, hội thảo, có sức chứa hơn 700 khách. Với hệ thống âm thanh ánh sáng hiện đại, đội ngũ nhân viên nhiều kinh nghiệm, chất lượng phục vụ chuyên nghiệp sẽ mang lại sự thoải mái nhất cho Quý khách khi chọn nhà hàng Hòa Bình của chúng tôi.
-								img(src="./assets/images/product-detail/item-more-in-tab/2.jpg", alt="")
-					.content(tab-id="2")
-						.content__detail-normal
-							.item__content
-								img(src="./assets/images/product-detail/item-more-in-tab/3.jpg", alt="")
-					.content(tab-id="3")
-						.content__detail-normal
-							.item__content
-								img(src="./assets/images/product-detail/item-more-in-tab/4.jpg", alt="")
-					.content(tab-id="4")
-						.content__detail-normal
-							.item__content
-								img(src="./assets/images/product-detail/item-more-in-tab/5.jpg", alt="")
+								p.fw-700.cl-main Lưu ý :
+								ul.list-style-1
+									li Giá trên: bao gồm chi phí cầu đường, bến bãi, thuế VAT
+									li Không bao gồm: chi phí ăn nghỉ của lái xe
+									li Vào mùa lễ, tết giá xe tăng 30%
+									li Vào mùa thấp điểm giá xe giảm từ 10% đến 20%
+									li Bảng giá áp dụng giá nhiên liệu 17.690 đ/lít . (dầu 14/3/19 = 16.060). Trong trường hợp giá nhiên liệu tăng, giảm thì bảng giá sẽ được điều chỉnh
+									li Quý khách có nhu cầu báo giá theo yêu cầu riêng biệt vui lòng liên hệ Hotline: 
+										span.cl-main--2 0917 421 288
+						.block-form-booking-detail
+							form(action="#")
+								.item__title
+									h2.ta-c.mx-at THÔNG TIN ĐẶT XE
+								.form-group.col-lg-12
+									label(for="#") Họ và tên: (*)
+									input(type="text")
+								.form-group.col-lg-12
+									label(for="#") Địa chỉ: (*)
+									input(type="text")
+								.form-group.col-lg-12
+									label(for="#") Điện thoại: (*)
+									input(type="text")
+								.form-group.col-lg-12
+									label(for="#") Email: (*)
+									input(type="text")
+								.form-group.col-lg-12
+									label(for="#") Lộ trình: (*)
+									input(type="text")
+								.form-group.col-lg-12
+									label(for="#") Địa điểm đón khách: (*)
+									input(type="text")
+								.form-group.col-lg-12
+									p.cl-main.ml-at Chú ý:(*) là thông tin bắt buộc
+								.form-group.col-lg-12
+									label.color-main.fw-700(for="#") Yêu cầu thêm:
+									textarea(name="")
+								.form-group.col-lg-12
+									button.mx-at.d-b.btn.btn-submit-3 đặt xe
 			.col-lg-3
 				.other-products
 					.title
-						h2.cl-main.tt-u nhà hàng khác
+						h2.cl-main.tt-u xe khác
 						span.cl-main--2 Theo chất lượng
-					-for(i=15;i<17;i++)
-						.other-product__item
+					-for(i=18;i<21;i++)
+						.other-product__item.hover-style-1.bg-blue
 							a(href="#")
 								.img.ov-h
 									img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+i+".jpeg", alt="SAN-PHAM-KHAC")
+									span.read-more.tt-u xem thêm
 								.text
 									h3.lcl.lcl-1.cl-main TÊN SẢN PHẨM LIÊN QUAN

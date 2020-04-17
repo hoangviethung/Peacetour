@@ -30,7 +30,13 @@ const showBackToTop = () => {
 
 const showFormSearch = () => {
 	$('.icon-search').on('click', function () {
-		$('.block-form-search').toggleClass('active')
+		$('.block-form-search').toggleClass('active');
+	});
+
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 90) {
+			$('.block-form-search').removeClass('active');
+		}
 	});
 }
 

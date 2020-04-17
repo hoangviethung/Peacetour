@@ -1,0 +1,18 @@
+section.service-introduction
+	.container
+		.block-title.color-blue
+			.title
+				h2.lcl.lcl-1 DANH MỤC TIN TỨC
+			.desc
+				p Nơi cập nhật những tour mới nhất, những tin tức giúp ích cho chuyến du hành của bạn. Cung cấp những bí kíp bỏ túi khi du lịch khắp mọi nơi trên thế giới.
+		.row.list-category-news
+			-for(i=2;i<4;i++)
+				.item-category-news.col-lg-12
+					a(href="news-detail.html")
+						.row.block-item.hover-style-1
+							.img.ov-h.col-sm-4
+								img.ofcv.lazyload.blur-up(data-src="./assets/images/news/"+i+".jpeg", alt="NHA-HANG-KHACH-SAN-HOA-BINH")
+							.content.col-sm-8
+								h2.cl-main.tt-u.lcl.lcl-1 KHUYẾN MÃI TÀU CAO TỐC RẠCH GIÁ - PHÚ QUỐC
+								p.lcl.lcl-3 Từ ngày 04/09/2019 đến ngày 31/10/2019, Hòa Binh Shipping giảm giá vé tàu SEABUS tuyến RẠCH GIÁ - PHÚ QUỐC - RẠCH GIÁ từ 10% đến 20% cho tất cả các hạng vé.
+								span.cl-main--2.d-b.ta-r Xem thêm +
