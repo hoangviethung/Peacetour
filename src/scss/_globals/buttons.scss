@@ -39,6 +39,21 @@
 		}
 	}
 
+	&-submit-3 {
+		width         : 150px;
+		height        : 50px;
+		border        : 1px solid map-get($mau, main);
+		color         : map-get($mau, main);
+		font-size     : 17px;
+		cursor        : pointer;
+		text-transform: uppercase;
+
+		@media (max-width: 1024.98px) {
+			font-size: 14px;
+			width    : 75px;
+		}
+	}
+
 	&-view-more {
 		cursor          : pointer;
 		padding         : 8px 25px 8px 25px;

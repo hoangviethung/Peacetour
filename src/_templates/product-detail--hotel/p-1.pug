@@ -1,0 +1,30 @@
+section.product-overview
+	.container
+		.row
+			.col-lg-5
+				.slider-product-detail
+					.slider-preview
+						.swiper-container
+							.swiper-wrapper
+								-for(i=7;i<13;i++)
+									.swiper-slide
+										.img.ov-h
+											img.ofcv(src="./assets/images/product-detail/"+i+".jpeg", alt="")
+					.slider-thumbnail
+						.swiper-container
+							.swiper-wrapper
+								-for(j=7;j<13;j++)
+									.swiper-slide
+										.img.ov-h
+											img.ofcv(src="./assets/images/product-detail/"+j+".jpeg", alt="")
+						.swiper-button-prev
+						.swiper-button-next
+			.col-lg-7
+				.information-overview
+					h1 HÒA BÌNH RẠCH GIÁ RESORT
+					.list-information.row
+						.item-information.col-lg-12
+							p.address 62-64-66 đường Cô Bắc, Phường Vĩnh Bảo, Rạch Giá, Kiên Giang
+					.box-booking
+						.price Giá từ: 1,100,000 VNĐ/đêm
+						a(href="#").btn.btn-submit.mx-at liên hệ ngay

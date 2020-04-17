@@ -7,7 +7,6 @@ section.product-information-detail
 					.item.tt-u.fw-700(toggle-for="2") chi tiết tour
 					.item.tt-u.fw-700(toggle-for="3") lưu ý
 					.item.tt-u.fw-700(toggle-for="4") ý kiến khách hàng
-					.item.tt-u.fw-700(toggle-for="5") đặt phòng
 				.tab-content.pid__tab-contents
 					.content(tab-id="1")
 						.tour-program
@@ -164,13 +163,15 @@ section.product-information-detail
 										img.ofcv(src="", alt="AVATAR-USER")
 									.input__comment
 										p Đây là một trải nghiệm hết sức tuyệt vời đối với tôi !!!
-					.content(tab-id="5")
-						.block-form-book-hotel
-							form(action="#")
-								.form-row
-									.form-group.col-lg-12
-										label(for="#") Ngày nhận phòng:
-										input(class="date-picker" type="date")
-									.form-group.col-lg-12
-										label(for="#") Ngày trả phòng:
-										input(class="date-picker" type="date")
+			.col-lg-3
+				.other-products
+					.title
+						h2.cl-main.tt-u tour khác
+						span.cl-main--2 Theo chất lượng
+					-for(i=1;i<4;i++)
+						.other-product__item
+							a(href="#")
+								.img.ov-h
+									img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+i+".jpg", alt="SAN-PHAM-KHAC")
+								.text
+									h3.lcl.lcl-1.cl-main TÊN SẢN PHẨM LIÊN QUAN

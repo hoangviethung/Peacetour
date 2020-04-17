@@ -1010,3 +1010,45 @@
 		}
 	}
 }
+
+.list-item-other-day-tour {
+	margin: 50px 0;
+
+	@media (max-width: 767.98px) {
+		margin: 25px 0;
+	}
+}
+
+.item__other-day-tour {
+	display      : flex;
+	flex-wrap    : wrap;
+	margin-bottom: 25px;
+
+	.item__img {
+		-ms-flex        : 0 0 100%;
+		-webkit-box-flex: 0;
+		flex            : 0 0 33.33333%;
+		max-width       : 33.33333%;
+		height          : 260px;
+	}
+
+	.item__content {
+		display         : flex;
+		flex-wrap       : wrap;
+		-webkit-box-flex: 0;
+		flex            : 0 0 66.666667%;
+		max-width       : 66.666667%;
+		background-color: #e7ebed;
+		padding         : 20px;
+	}
+
+	.content__top {
+		h2 {
+			font-size: 24px;
+		}
+
+		time {
+			font-size: 18px;
+		}
+	}
+}

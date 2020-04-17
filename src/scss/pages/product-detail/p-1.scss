@@ -95,48 +95,63 @@
 		}
 
 		.list-information {
-			display   : flex;
-			flex-wrap : wrap;
 			margin-top: 25px;
 
 			.item-information {
-				-ms-flex        : 0 0 100%;
-				-webkit-box-flex: 0;
-				flex            : 0 0 50%;
-				max-width       : 50%;
-				margin-bottom   : 10px;
+				margin-bottom: 10px;
+
+				.link-color-red {
+					font-size   : 18px;
+					font-weight : 700;
+					position    : relative;
+					cursor      : pointer;
+					color       : map-get($mau, main-2);
+					padding-left: 30px;
+
+					&:after {
+						content          : '';
+						position         : absolute;
+						top              : 50%;
+						left             : 0;
+						transform        : translateY(-50%);
+						width            : 18px;
+						height           : 18px;
+						background-image : url(../assets/icons/date-time.png);
+						background-size  : cover;
+						background-repeat: no-repeat;
+					}
+				}
 
 				p {
+					position   : relative;
 					color      : #5d5d5d;
 					font-size  : 18px;
 					font-weight: 700;
 
-					&.cl-red {
-						position    : relative;
-						cursor      : pointer;
-						color       : map-get($mau, main-2);
-						padding-left: 30px;
-
-						&:after {
-							content          : '';
-							position         : absolute;
-							top              : 50%;
-							left             : 0;
-							transform        : translateY(-50%);
-							width            : 18px;
-							height           : 18px;
-							background-image : url(../assets/icons/date-time.png);
-							background-size  : cover;
-							background-repeat: no-repeat;
-						}
+					+p {
+						margin-top: 10px;
 					}
 
 					span {
 						font-weight: 400;
 					}
+
+					&.address {
+						padding-left: 30px;
+
+						&:afteR {
+							content          : '';
+							position         : absolute;
+							left             : 0;
+							top              : 5px;
+							width            : 18px;
+							height           : 18px;
+							background-size  : cover;
+							background-repeat: no-repeat;
+							background-image : url(../assets/icons/address.png);
+						}
+					}
 				}
-
-
 
 				&.detail {
 					display: flex;
@@ -186,25 +201,25 @@
 		}
 
 		.box-booking {
-			display   : flex;
-			flex-wrap : wrap;
-			margin-top: 15px;
-		}
-
-		.btn-submit,
-		.price {
-			-ms-flex        : 0 0 100%;
-			-webkit-box-flex: 0;
-			flex            : 0 0 50%;
-			max-width       : 50%;
+			display    : flex;
+			align-items: center;
+			flex-wrap  : wrap;
+			margin-top : 15px;
 		}
 
 		.btn-submit {
-			max-width: 30%;
-			margin   : 0 auto;
+			-ms-flex        : 0 0 100%;
+			-webkit-box-flex: 0;
+			flex            : 0 0 40%;
+			max-width       : 30%;
 		}
 
 		.price {
+			-ms-flex        : 0 0 100%;
+			-webkit-box-flex: 0;
+			flex            : 0 0 60%;
+			max-width       : 60%;
+			//CSS
 			font-size: 30px;
 			color    : map-get($mau, main-2);
 			border   : 1px dashed map-get($mau, main);

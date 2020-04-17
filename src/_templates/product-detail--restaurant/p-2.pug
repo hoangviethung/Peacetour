@@ -1,0 +1,39 @@
+section.product-information-detail
+	.container
+		.row
+			.col-lg-9.tab-container
+				.list-tab.pid-tab-items.d-f
+					.item.tt-u.fw-700(toggle-for="1") sảnh tiệc
+					.item.tt-u.fw-700(toggle-for="2") thực đơn
+					.item.tt-u.fw-700(toggle-for="3") dịch vụ
+					.item.tt-u.fw-700(toggle-for="4") khuyến mãi
+				.tab-content.pid__tab-contents
+					.content(tab-id="1")
+						.content__detail-normal
+							.item__content
+								p Tọa lạc tại Trung tâm thị trấn Dương Đông, nằm trong khu liên hợp của Hòa Bình – Phú Quốc Resort, nhà hàng Hòa Bình được xem là địa điểm thuận tiện nhất cho những buổi tiệc cưới hay hội nghị, hội thảo, có sức chứa hơn 700 khách. Với hệ thống âm thanh ánh sáng hiện đại, đội ngũ nhân viên nhiều kinh nghiệm, chất lượng phục vụ chuyên nghiệp sẽ mang lại sự thoải mái nhất cho Quý khách khi chọn nhà hàng Hòa Bình của chúng tôi.
+								img(src="./assets/images/product-detail/item-more-in-tab/2.jpg", alt="")
+					.content(tab-id="2")
+						.content__detail-normal
+							.item__content
+								img(src="./assets/images/product-detail/item-more-in-tab/3.jpg", alt="")
+					.content(tab-id="3")
+						.content__detail-normal
+							.item__content
+								img(src="./assets/images/product-detail/item-more-in-tab/4.jpg", alt="")
+					.content(tab-id="4")
+						.content__detail-normal
+							.item__content
+								img(src="./assets/images/product-detail/item-more-in-tab/5.jpg", alt="")
+			.col-lg-3
+				.other-products
+					.title
+						h2.cl-main.tt-u nhà hàng khác
+						span.cl-main--2 Theo chất lượng
+					-for(i=15;i<17;i++)
+						.other-product__item
+							a(href="#")
+								.img.ov-h
+									img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+i+".jpeg", alt="SAN-PHAM-KHAC")
+								.text
+									h3.lcl.lcl-1.cl-main TÊN SẢN PHẨM LIÊN QUAN

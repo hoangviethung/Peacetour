@@ -35,19 +35,25 @@
 				}
 
 				.description {
-					position      : absolute;
-					top           : 25%;
-					width         : 70%;
-					color         : #fff;
-					text-shadow   : 1px 1px 1px #000000;
-					text-transform: uppercase;
-					text-align    : center;
+					display        : flex;
+					justify-content: center;
+					position       : absolute;
+					top            : 25%;
+					width          : 70%;
+					color          : #fff;
+					text-shadow    : 1px 1px 1px #000000;
+					text-transform : uppercase;
+
+					.content {
+						text-align: center;
+					}
 
 					.number {
+						font-family: srg;
 						color      : map-get($mau, main);
 						font-size  : 125px;
 						line-height: 1;
-						float      : left;
+						display    : inline;
 					}
 
 					.text-day {

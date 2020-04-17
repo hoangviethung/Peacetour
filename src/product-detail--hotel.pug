@@ -1,8 +1,8 @@
 extends _templates/_layout/_layout.pug
 
 block var
-	- let title = 'Du lịch Hòa Bình - Danh Sách Tour';
-	- let bodyClass = 'list-tour';
+	- let title = 'Du lịch Hòa Bình - Chi Tiết Tour';
+	- let bodyClass = 'product-detail';
 
 block loading
 block banner,block-book-tour,_tour-type,breadcrumb
@@ -11,6 +11,6 @@ block banner,block-book-tour,_tour-type,breadcrumb
 	// Breadcrumb
 	include _templates/_layout/_breadcrumb
 block main
-	// DACH SÁCH SẢN PHẨM (BLOCK CHUNG CHO TẤT CẢ TEMPLATES - LIST TOUR)
-	include _templates/_layout/_list-of-products-type-1
+	include _templates/product-detail--hotel/p-1
+	include _templates/product-detail--hotel/p-2
 block scripts

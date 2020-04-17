@@ -1,8 +1,8 @@
 extends _templates/_layout/_layout.pug
 
 block var
-	- let title = 'Du lịch Hòa Bình - Chi Tiết Tour';
-	- let bodyClass = 'product-detail';
+	- let title = 'Du lịch Hòa Bình - Chọn ngày khác';
+	- let bodyClass = 'other-day-tour';
 
 block loading
 block banner,block-book-tour,_tour-type,breadcrumb
@@ -11,6 +11,5 @@ block banner,block-book-tour,_tour-type,breadcrumb
 	// Breadcrumb
 	include _templates/_layout/_breadcrumb
 block main
-	include _templates/product-detail/p-1
-	include _templates/product-detail/p-2
+	include _templates/other-day-tour/o-1
 block scripts

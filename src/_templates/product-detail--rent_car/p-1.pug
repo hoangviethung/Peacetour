@@ -1,0 +1,30 @@
+section.product-overview
+	.container
+		.row
+			.col-lg-5
+				.slider-product-detail
+					.slider-preview
+						.swiper-container
+							.swiper-wrapper
+								-for(i=19;i<24;i++)
+									.swiper-slide
+										.img.ov-h
+											img.ofcv(src="./assets/images/product-detail/"+i+".jpeg", alt="")
+					.slider-thumbnail
+						.swiper-container
+							.swiper-wrapper
+								-for(j=19;j<24;j++)
+									.swiper-slide
+										.img.ov-h
+											img.ofcv(src="./assets/images/product-detail/"+j+".jpeg", alt="")
+						.swiper-button-prev
+						.swiper-button-next
+			.col-lg-7
+				.information-overview
+					h1 HUYNDAI AERO TOWN
+					.list-information.row
+						.item-information.col-lg-12
+							p Loại xe: 30 - 33 chỗ
+							p Hiệu xe: Huyndai
+					.box-booking
+						a(href="#").btn.btn-submit liên hệ đặt xe

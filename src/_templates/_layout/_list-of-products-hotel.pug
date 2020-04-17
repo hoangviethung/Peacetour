@@ -1,0 +1,27 @@
+section.list-of-products
+	.container
+		.block-title.color-blue
+			.title
+				h2.lcl.lcl-1 KHÁCH SẠN
+			.desc
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, deserunt! Illum explicabo et dolores, quo dolorem quaerat at itaque laborum saepe quia debitis tenetur rerum officiis impedit earum praesentium dolore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum necessitatibus possimus laboriosam nihil maxime ut corporis ipsa culpa unde animi? Consectetur molestiae ipsum ipsam, dignissimos hic quidem quis deleniti excepturi?
+		.row.list-item
+			-for(i=12;i<15;i++)
+				// BLOCK SẢN PHẦM - DATA HOT = TRUE => XUẤT HIỆN TAG HOT
+				.item-product.col-lg-4.col-sm-6(data-hot="true")
+					a(href="product-detail--hotel.html")
+						.block-item
+							.img.ov-h
+								img.ofcv.lazyload.blur-up(data-src="./assets/images/item/"+i+".jpeg", alt="NHA-HANG-KHACH-SAN-HOA-BINH")
+							.content
+								.box-info
+									h2 Tên Khách Sạn
+									// SỐ SAO CỦA KHÁCH SẠN (SỐ SAO = DATA-RATE)
+									.rate(data-rate=4)
+										.img-star
+											.star
+											.star-rated
+									.address
+										p 62-64-66 đường Cô Bắc, Phường Vĩnh Bảo, Rạch Giá, Kiên Giang
+									.price.hotel Giá từ: 
+										span 1,100,000 VNĐ/đêm

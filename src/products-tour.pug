@@ -1,0 +1,16 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Du lịch Hòa Bình - Danh Sách Tour';
+	- let bodyClass = 'list-tour';
+
+block loading
+block banner,block-book-tour,_tour-type,breadcrumb
+	// DANH SÁCH CÁC KIỂU TOUR
+	include _templates/_layout/_tour-type
+	// Breadcrumb
+	include _templates/_layout/_breadcrumb
+block main
+	// DACH SÁCH SẢN PHẨM (BLOCK CHUNG CHO TẤT CẢ TEMPLATES - LIST TOUR)
+	include _templates/_layout/_list-of-products-tour
+block scripts
