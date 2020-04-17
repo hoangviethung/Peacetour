@@ -1,3 +1,7 @@
 #map {
 	height: 500px;
+
+	@media (max-width: 575.98px) {
+		height: 300px;
+	}
 }

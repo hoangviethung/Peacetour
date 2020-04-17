@@ -102,6 +102,7 @@
 
 		textarea {
 			resize: none;
+			height: 200px;
 		}
 
 		button {
@@ -135,6 +136,24 @@
 				.item {
 					font-size: 14px;
 				}
+			}
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		.block-form {
+
+			input,
+			textarea {
+				font-size: 14px;
+			}
+
+			button {
+				font-size: 14px;
+				width    : 50%;
+				display  : block;
+				margin   : 0 auto;
+				height   : 35px;
 			}
 		}
 	}
