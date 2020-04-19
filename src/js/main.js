@@ -2,12 +2,58 @@ import Cookie from './lib/Cookie'
 import Loading from './lib/Loading'
 import GetSVG from './lib/GetSVG'
 import Tab from './lib/Tab'
+import Mapping from './lib/MoveElement'
 
 
 const initializationClassSubMenu = () => {
 	const itemHasSub = $('header .bottom-menu .nav-menu-bottom .item-menu-bottom').children('.nav-menu-bottom');
 	itemHasSub.addClass('sub-menu-lv1');
 	itemHasSub.parents('.item-menu-bottom').addClass('has-sub');
+}
+
+const showSubMenuMobile = () => {
+	$('.item-menu-bottom.has-sub').on('click', function (e) {
+		$('.item-menu-bottom.has-sub').not(this).removeClass('active');
+		$('.item-menu-bottom.has-sub').not(this).find('.sub-menu-lv1').slideUp();
+		$(this).toggleClass('active');
+		$(this).find('.sub-menu-lv1').slideToggle();
+	});
+}
+
+const showMenuMobile = () => {
+	$('.toggle-menu').on('click', function () {
+		$(this).toggleClass('active');
+		$('.bottom-menu').toggleClass('active');
+		$('.item-menu-bottom.has-sub').removeClass('active');
+		$('.sub-menu-lv1').slideUp();
+		$('body').toggleClass('disabled')
+		$('#overlay').toggleClass('active');
+	});
+
+	$('#overlay').on('click', function () {
+		$(this).removeClass('active');
+		$('.toggle-menu').removeClass('active');
+		$('.bottom-menu').removeClass('active');
+		$('.sub-menu-lv1').slideUp();
+		$('.item-menu-bottom.has-sub').removeClass('active');
+	});
+}
+
+const checkLayoutMobile = () => {
+	const banner = $('.banner');
+	const listTourType = $('.list-tour-type');
+	if ($(window).width() < 1024) {
+		if (banner.length > 0) {
+			banner.css({
+				'padding-top': '90px',
+			})
+		} else {
+			listTourType.css({
+				'padding-top': '135px',
+				'margin-top': '0px',
+			})
+		}
+	}
 }
 
 // SHOW BACK TO TOP
@@ -314,13 +360,32 @@ const showContentTourProgram = () => {
 	});
 }
 
+const moveTopHeaderMobile = () => {
+	return new Mapping('header .top-header', {
+		mobileNode: '.nav-menu-bottom',
+		mobileMethod: 'appendTo',
+		breakpoint: 1025,
+	})
+}
+
+const moveLanguageMobile = () => {
+	return new Mapping('header .language', {
+		mobileNode: '.list-menu-bottom',
+		mobileMethod: 'insertBefore',
+		breakpoint: 1025,
+	})
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
 	GetSVG();
 	Loading();
 	initializationClassSubMenu();
+	checkLayoutMobile();
 	showBackToTop();
 	showFormSearch();
+	showMenuMobile();
+	showSubMenuMobile();
 	bannerSlider();
 	brandSlider();
 	tourTypeSlider();
@@ -331,6 +396,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	libraryImages();
 	showContentTourProgram();
 	settingFancyBoxLibrarySite();
+	moveTopHeaderMobile();
+	moveLanguageMobile();
 	const tabBlockBookTour = new Tab('.block-book-tour');
 	const tabProdcutDetail = new Tab('.product-information-detail');
 })

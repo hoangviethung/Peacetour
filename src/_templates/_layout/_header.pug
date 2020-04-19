@@ -1,6 +1,6 @@
 header
-	// MENU TOP
 	.top-header
+		// MENU TOP
 		.container.h-100
 			.row.no-gutters.ai-c.h-100
 				// MENU TOP
@@ -17,16 +17,19 @@ header
 				.hot-line
 					a(data-fancybox data-src="#hot-line-popup" href="javascript:;")
 						.icon
-							img(src="./assets/icons/phone-menu-top.png" alt="HOT-LINE")
+							img.lazyload.blur-up.dekstop(data-src="./assets/icons/phone-menu-top.png" alt="HOT-LINE")
+							img.lazyload.blur-up.mobile(data-src="./assets/icons/phone-menu-top-mobile.png" alt="HOT-LINE")
 						.text Hotline
 				// ĐĂNG KÝ - ĐĂNG NHẬP
 				.user-login
 					a(data-fancybox data-src="#login-register-popup" href="javascript:;")
 						.icon
-							img(src="./assets/icons/user-menu-top.png" alt="LOGIN")
+							img.lazyload.blur-up.dekstop(data-src="./assets/icons/user-menu-top.png" alt="LOGIN")
+							img.lazyload.blur-up.mobile(data-src="./assets/icons/user-menu-top-mobile.png" alt="LOGIN")
 						.text Tài khoản
-				// NGÔN NGỮ
 				.language
+					// NGÔN NGỮ
+					.text.mobile Language :
 					ul.list-language
 						li.item.active(data-language="vi")
 							img.lazyload.blur-up(data-src="./assets/icons/vi.png" alt="VIET-NAM")
@@ -36,14 +39,19 @@ header
 							img.lazyload.blur-up(data-src="./assets/icons/jp.png" alt="JAPAN")
 						li.item(data-language="fr")
 							img.lazyload.blur-up(data-src="./assets/icons/fr.png" alt="FRANCE")
-	// BOTTOM MENU
 	.bottom-menu
+		// BOTTOM MENU
 		.container.h-100
 			.block-logo
 				a(href="index.html")
 					.logo
 						img.lazyload.blur-up(data-src="./assets/logo.png" alt="LOGO-HOA-BINH")
-			.row.no-gutters.ai-c.h-100
+			.toggle-menu.mobile
+				.list-line
+					span.line
+					span.line
+					span.line
+			.row.no-gutters.ai-c.h-100.list-menu-bottom
 				ul.nav-menu-bottom
 					li.item-menu-bottom
 						a.link-menu-bottom(href="products-tour.html") tour trong nước
@@ -82,4 +90,6 @@ header
 								.form-group
 									label
 										input(type="text", name="" placeholder="Nhập để tìm kiếm...")
-										button Tìm
+										button
+											.dekstop Tìm
+											img.lazyload.blur-up.mobile(data-src="./assets/icons/search-icon.png", alt="SEARCH")
