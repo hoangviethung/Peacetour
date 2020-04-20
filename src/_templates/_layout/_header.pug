@@ -13,20 +13,22 @@ header
 						a.link-menu-top(href="contact.html") Liên hệ
 					li.item-menu-top
 						a.link-menu-top(href="library-site.html") Thư viện
-				// ĐƯỜNG DÂY NÓNG
-				.hot-line
-					a(data-fancybox data-src="#hot-line-popup" href="javascript:;")
-						.icon
-							img.lazyload.blur-up.dekstop(data-src="./assets/icons/phone-menu-top.png" alt="HOT-LINE")
-							img.lazyload.blur-up.mobile(data-src="./assets/icons/phone-menu-top-mobile.png" alt="HOT-LINE")
-						.text Hotline
-				// ĐĂNG KÝ - ĐĂNG NHẬP
-				.user-login
-					a(data-fancybox data-src="#login-register-popup" href="javascript:;")
-						.icon
-							img.lazyload.blur-up.dekstop(data-src="./assets/icons/user-menu-top.png" alt="LOGIN")
-							img.lazyload.blur-up.mobile(data-src="./assets/icons/user-menu-top-mobile.png" alt="LOGIN")
-						.text Tài khoản
+				.box--hot-line__user-login
+					.hot-line
+						// ĐƯỜNG DÂY NÓNG
+						a(data-fancybox data-src="#hot-line-popup" href="javascript:;")
+							.icon
+								img.lazyload.blur-up.dekstop(data-src="./assets/icons/phone-menu-top.png" alt="HOT-LINE")
+								img.lazyload.blur-up.mobile(data-src="./assets/icons/phone-menu-top-mobile.png" alt="HOT-LINE")
+							.text Hotline
+					
+					.user-login
+						// ĐĂNG KÝ - ĐĂNG NHẬP
+						a(data-fancybox data-src="#login-register-popup" href="javascript:;")
+							.icon
+								img.lazyload.blur-up.dekstop(data-src="./assets/icons/user-menu-top.png" alt="LOGIN")
+								img.lazyload.blur-up.mobile(data-src="./assets/icons/user-menu-top-mobile.png" alt="LOGIN")
+							.text Tài khoản
 				.language
 					// NGÔN NGỮ
 					.text.mobile Language :
@@ -46,11 +48,11 @@ header
 				a(href="index.html")
 					.logo
 						img.lazyload.blur-up(data-src="./assets/logo.png" alt="LOGO-HOA-BINH")
-			.toggle-menu.mobile
-				.list-line
-					span.line
-					span.line
-					span.line
+				.toggle-menu.mobile
+					.list-line
+						span.line
+						span.line
+						span.line
 			.row.no-gutters.ai-c.h-100.list-menu-bottom
 				ul.nav-menu-bottom
 					li.item-menu-bottom

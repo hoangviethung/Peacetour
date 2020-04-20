@@ -130,7 +130,7 @@ const bannerSlider = () => {
 
 const tourTypeSlider = () => {
 	var swiper = new Swiper('.slider-tour-type .swiper-container', {
-		slidesPerView: 4,
+		slidesPerView: 3,
 		spaceBetween: 15,
 		loop: true,
 		speed: 500,
@@ -147,6 +147,10 @@ const tourTypeSlider = () => {
 			768: {
 				slidesPerView: 6,
 			}
+		},
+		navigation: {
+			nextEl: '.slider-tour-type .swiper-button-next',
+			prevEl: '.slider-tour-type .swiper-button-prev',
 		},
 	})
 }
@@ -203,7 +207,7 @@ const brandSlider = () => {
 const productDetailSlider = () => {
 	var thumbnail = new Swiper('.slider-product-detail .slider-thumbnail .swiper-container', {
 		spaceBetween: 10,
-		slidesPerView: 2,
+		slidesPerView: 4,
 		observer: true,
 		observeParents: true,
 		slideToClickedSlide: true,
@@ -215,17 +219,7 @@ const productDetailSlider = () => {
 			nextEl: '.slider-thumbnail .swiper-button-next',
 			prevEl: '.slider-thumbnail .swiper-button-prev',
 		},
-		breakpoints: {
-			320: {
-				slidesPerView: 2,
-			},
-			575: {
-				slidesPerView: 3,
-			},
-			1025: {
-				slidesPerView: 4,
-			}
-		},
+		breakpoints: {},
 	});
 
 	var review = new Swiper('.slider-product-detail .slider-preview .swiper-container', {
@@ -360,26 +354,51 @@ const showContentTourProgram = () => {
 	});
 }
 
-const moveTopHeaderMobile = () => {
-	return new Mapping('header .top-header', {
-		mobileNode: '.nav-menu-bottom',
-		mobileMethod: 'appendTo',
-		breakpoint: 1025,
-	})
-}
+const MoveElement = () => {
+	const moveTopHeaderMobile = () => {
+		return new Mapping('header .top-header', {
+			mobileNode: '.nav-menu-bottom',
+			mobileMethod: 'appendTo',
+			breakpoint: 1025,
+		})
+	}
 
-const moveLanguageMobile = () => {
-	return new Mapping('header .language', {
-		mobileNode: '.list-menu-bottom',
-		mobileMethod: 'insertBefore',
-		breakpoint: 1025,
-	})
+	const moveLanguageMobile = () => {
+		return new Mapping('header .language', {
+			mobileNode: '.list-menu-bottom',
+			mobileMethod: 'insertBefore',
+			breakpoint: 1025,
+		})
+	}
+
+	const moveBlockLogoMobile = () => {
+		return new Mapping('header .block-logo', {
+			mobileNode: 'header',
+			mobileMethod: 'prependTo',
+			breakpoint: 1025,
+		})
+	}
+
+	const moveBlockIconsTopHeader = () => {
+		return new Mapping('header .box--hot-line__user-login', {
+			mobileNode: 'header',
+			mobileMethod: 'prependTo',
+			breakpoint: 1025,
+		})
+	}
+
+	//CALL HERE !!!
+	moveTopHeaderMobile();
+	moveLanguageMobile();
+	moveBlockLogoMobile();
+	moveBlockIconsTopHeader();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
 	GetSVG();
 	Loading();
+	MoveElement();
 	initializationClassSubMenu();
 	checkLayoutMobile();
 	showBackToTop();
@@ -396,8 +415,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	libraryImages();
 	showContentTourProgram();
 	settingFancyBoxLibrarySite();
-	moveTopHeaderMobile();
-	moveLanguageMobile();
 	const tabBlockBookTour = new Tab('.block-book-tour');
 	const tabProdcutDetail = new Tab('.product-information-detail');
 })

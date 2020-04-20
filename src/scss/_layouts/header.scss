@@ -69,12 +69,13 @@ header {
 
 				&:nth-child(2) {
 					width    : 100%;
-					transform: translateY(-50%) rotate(45deg);
+					top      : 45%;
+					transform: rotate(45deg);
 				}
 
 				&:last-child {
-					bottom   : 50%;
-					transform: translateY(-50%) rotate(-45deg);
+					bottom   : 47%;
+					transform: rotate(-45deg);
 				}
 			}
 		}
@@ -87,18 +88,6 @@ header {
 
 		.container {
 			z-index: 2;
-		}
-
-		.icon {
-			position: relative;
-			width   : 20px;
-			height  : 20px;
-
-			img {
-				position: absolute;
-				top     : 0;
-				left    : 0;
-			}
 		}
 
 		.nav-menu-top {
@@ -128,32 +117,6 @@ header {
 				}
 			}
 		}
-
-		.hot-line,
-		.user-login {
-			>a {
-				cursor      : pointer;
-				user-select : none;
-				display     : flex;
-				align-items : center;
-				margin-right: 25px;
-			}
-
-			.text {
-				font-size   : 14px;
-				line-height : 1;
-				color       : #fff;
-				padding-left: 5px;
-				margin-left : 10px;
-				border-left : 1px solid #fff;
-			}
-		}
-
-		.user-login {
-			margin-right: 75px;
-		}
-
-
 
 		&:after,
 		&:before {
@@ -292,6 +255,43 @@ header {
 		}
 	}
 
+	.box--hot-line__user-login {
+		display     : flex;
+		margin-right: 75px;
+	}
+
+	.icon {
+		position: relative;
+		width   : 20px;
+		height  : 20px;
+
+		img {
+			position: absolute;
+			top     : 0;
+			left    : 0;
+		}
+	}
+
+	.hot-line,
+	.user-login {
+		>a {
+			cursor      : pointer;
+			user-select : none;
+			display     : flex;
+			align-items : center;
+			margin-right: 25px;
+		}
+
+		.text {
+			font-size   : 14px;
+			line-height : 1;
+			color       : #fff;
+			padding-left: 5px;
+			margin-left : 10px;
+			border-left : 1px solid #fff;
+		}
+	}
+
 	.language {
 		position: absolute;
 		top     : 20%;
@@ -401,9 +401,14 @@ header {
 		left      : 0;
 		width     : 100%;
 		height    : 90px;
-		background: #fff;
+		background: #ffffff;
 		z-index   : 999;
 		box-shadow: 0px 1px 9px 2px rgba(112, 112, 112, 0.1);
+
+		.box--hot-line__user-login {
+			display     : block;
+			margin-right: 0;
+		}
 
 		.block-logo {
 			position: fixed;
@@ -439,28 +444,28 @@ header {
 				display: none;
 			}
 
-			.hot-line,
-			.user-login {
-				position: fixed;
-				top     : 30px;
+		}
 
-				.text {
-					display: none;
-				}
+		.hot-line,
+		.user-login {
+			position: fixed;
+			top     : 30px;
 
-				>a {
-					margin-right: 0;
-				}
+			.text {
+				display: none;
 			}
 
-			.user-login {
+			>a {
 				margin-right: 0;
-				right       : 65px;
 			}
+		}
 
-			.hot-line {
-				right: 100px;
-			}
+		.user-login {
+			right: 65px;
+		}
+
+		.hot-line {
+			right: 100px;
 		}
 
 		.bottom-menu {

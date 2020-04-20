@@ -34,20 +34,22 @@
 				opacity : .5;
 
 				&:after {
-					content : '';
-					left    : 0;
-					top     : 0;
-					width   : 100%;
-					height  : 100%;
-					position: absolute;
-					border  : 2px solid transparent;
+					content   : '';
+					left      : 50%;
+					top       : 0;
+					width     : 0;
+					height    : 3px;
+					position  : absolute;
+					transform : translateX(-50%);
+					background: map-get($mau, main);
+					transition: .3s all ease-in-out;
 				}
 
 				&.swiper-slide-thumb-active {
 					opacity: 1;
 
 					&:after {
-						border: 2px solid map-get($mau, main);
+						width: 50%;
 					}
 				}
 			}
@@ -274,7 +276,7 @@
 				padding   : 0 25px;
 
 				.img {
-					height: 100px;
+					height: 50px;
 				}
 			}
 		}

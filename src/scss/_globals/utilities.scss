@@ -289,11 +289,12 @@ body {
 			justify-content: center;
 			align-items    : center;
 			background     : map-get($mau, main);
-			color          : #fff;
 			text-transform : uppercase;
 			height         : 80px;
 
-			h2 {
+			h2,
+			a {
+				color        : #fff;
 				font-size    : 32px;
 				border-bottom: 1px dotted #ffffff;
 				font-weight  : 400;
@@ -626,7 +627,9 @@ body {
 	@media (max-width: 575.98px) {
 		.title {
 			h2 {
-				font-size: 24px;
+				font-size : 21px;
+				width     : 70%;
+				text-align: center;
 			}
 		}
 
@@ -680,23 +683,20 @@ body {
 	@media (max-width: 575.98px) {
 		figure {
 
-			img,
-			figcaption {
-				-ms-flex        : 0 0 100%;
-				-webkit-box-flex: 0;
-				flex            : 0 0 50%;
-				max-width       : 50%;
+			img {
+				display: none;
 			}
 
 			figcaption {
+				text-align: center;
 				margin-top: 10px;
+
+				h5 {
+					display: none;
+				}
 
 				h1 {
 					font-size: 24px;
-				}
-
-				p {
-					display: none;
 				}
 			}
 		}
@@ -819,13 +819,48 @@ body {
 		height : unset;
 
 		.item {
-			margin-bottom: 25px;
+			border-right  : 1px solid #dedede;
+			border-bottom : 1px solid #dedede;
+			padding-bottom: 20px;
+
+			&:nth-child(2),
+			&:nth-child(4) {
+				border-right: 0;
+			}
+
+			&:nth-child(3),
+			&:nth-child(4) {
+				padding-top: 20px;
+			}
+
+			&:nth-child(3) {
+				border-bottom: 0;
+			}
+
+			&:nth-child(4) {
+				border-bottom: 0;
+			}
 		}
 	}
 
 	@media (max-width: 767.98px) {
-		padding: 25px 0 0 0;
+		padding: 25px 0;
 		margin : 25px 0;
+	}
+
+	@media (max-width: 575.98px) {
+		.block-item {
+			.content {
+				h3 {
+					font-size    : 12px;
+					margin-bottom: 0;
+				}
+
+				p {
+					display: none;
+				}
+			}
+		}
 	}
 }
 
