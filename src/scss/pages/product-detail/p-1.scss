@@ -91,6 +91,7 @@
 
 	.information-overview {
 		h1 {
+			font-family  : rboc0;
 			font-size    : 24px;
 			color        : map-get($mau, main);
 			border-bottom: 1px solid map-get($mau, main);
@@ -103,6 +104,7 @@
 				margin-bottom: 10px;
 
 				.link-color-red {
+					font-family : rcbo1;
 					font-size   : 18px;
 					font-weight : 700;
 					position    : relative;
@@ -125,17 +127,17 @@
 				}
 
 				p {
+					font-family: rcbo1;
 					position   : relative;
 					color      : #5d5d5d;
 					font-size  : 18px;
-					font-weight: 700;
 
 					+p {
 						margin-top: 10px;
 					}
 
 					span {
-						font-weight: 400;
+						font-family: rc0;
 					}
 
 					&.address {
@@ -223,10 +225,11 @@
 			flex            : 0 0 60%;
 			max-width       : 60%;
 			//CSS
-			font-size: 30px;
-			color    : map-get($mau, main-2);
-			border   : 1px dashed map-get($mau, main);
-			padding  : 4px 1em;
+			font-family: rc0;
+			font-size  : 30px;
+			color      : map-get($mau, main-2);
+			border     : 1px dashed map-get($mau, main);
+			padding    : 4px 1em;
 		}
 	}
 

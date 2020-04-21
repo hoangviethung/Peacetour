@@ -14,6 +14,7 @@ section.block-book-tour
 							.form-group.col-lg-2.col-4
 								label(for="type") Lọa tour
 								select#type(name="type")
+									option(value="#") chọn tất cả
 									option(value="#") trong nước
 									option(value="#") nước ngoài
 									option(value="#") dài ngày
@@ -21,6 +22,7 @@ section.block-book-tour
 							.form-group.col-lg-2.col-4
 								label(for="starting") Nơi khởi hành
 								select#starting(name="starting")
+									option(value="#") chọn tất cả
 									option(value="#") hồ chí minh
 									option(value="#") phú quóc
 									option(value="#") hà nội
@@ -28,16 +30,18 @@ section.block-book-tour
 							.form-group.col-lg-2.col-4
 								label(for="destination") Nơi đến
 								select#destination(name="destination")
+									option(value="#") chọn tất cả
 									option(value="#") quy nhơn
 									option(value="#") hà nội
 									option(value="#") hồ chí minh
 									option(value="#") huế
 							.form-group.col-lg-2.col-4
-								label(for="destination") Ngày khởi hàng
-								input(class="date-picker")
+								label(for="departure-day") Ngày khởi hàng
+								input#departure-day(class="date-picker")
 							.form-group.col-lg-2.col-4
 								label(for="price") Giá
 								select#price(name="price")
+									option(value="#") chọn tất cả
 									option(value="#") 0 ~ 10000
 									option(value="#") 10000 ~ 20000
 									option(value="#") 20000 ~ 30000

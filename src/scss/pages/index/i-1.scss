@@ -50,22 +50,25 @@
 
 					.number {
 						font-family: srg;
-						color      : map-get($mau, main);
+						color      : #3c769a;
 						font-size  : 125px;
 						line-height: 1;
 						display    : inline;
 					}
 
 					.text-day {
-						font-size: 32px;
+						font-family: uabo;
+						font-size  : 32px;
 					}
 
 					.country {
-						font-size: 19px;
+						font-family: rc0;
+						font-size  : 19px;
 					}
 
 					time {
-						font-size: 17px;
+						font-family: rt2;
+						font-size  : 17px;
 					}
 				}
 
@@ -80,11 +83,12 @@
 
 					.price,
 					.currency {
-						position : absolute;
-						left     : 50%;
-						transform: translateX(-50%);
-						color    : #fff;
-						font-size: 14px;
+						font-family: rc0;
+						position   : absolute;
+						left       : 50%;
+						transform  : translateX(-50%);
+						color      : #fff;
+						font-size  : 14px;
 					}
 
 					.price {

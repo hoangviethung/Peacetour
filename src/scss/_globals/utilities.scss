@@ -294,8 +294,9 @@ body {
 
 			h2,
 			a {
+				font-family  : rc0;
 				color        : #fff;
-				font-size    : 32px;
+				font-size    : 24px;
 				border-bottom: 1px dotted #ffffff;
 				font-weight  : 400;
 			}
@@ -311,6 +312,7 @@ body {
 				border-right: 1px solid map-get($mau, main);
 
 				p {
+					font-family: rbo2;
 					color      : map-get($mau, main-2);
 					font-size  : 30px;
 					font-weight: 700;
@@ -318,10 +320,10 @@ body {
 				}
 
 				span {
+					font-family  : ri2;
 					font-size    : 18px;
 					margin       : 0 auto;
 					width        : 70%;
-					font-style   : italic;
 					color        : map-get($mau, main);
 					border-bottom: 1px dotted map-get($mau, main);
 				}
@@ -415,6 +417,7 @@ body {
 		}
 
 		.btn {
+			font-family   : rc0;
 			font-size     : 25px;
 			text-transform: uppercase;
 			width         : 100%;
@@ -573,6 +576,7 @@ body {
 		height  : 60px;
 
 		h2 {
+			font-family     : uabo;
 			position        : absolute;
 			top             : 50%;
 			left            : 50%;
@@ -659,14 +663,16 @@ body {
 			text-align: right;
 
 			h5 {
+				font-family   : rm2;
 				text-transform: uppercase;
 				font-size     : 13px;
 				color         : map-get($mau, main);
 			}
 
 			h1 {
-				font-size: 28px;
-				color    : map-get($mau, main);
+				font-family: uabo;
+				font-size  : 28px;
+				color      : map-get($mau, main);
 
 				span {
 					color: map-get($mau, main-2);
@@ -674,8 +680,9 @@ body {
 			}
 
 			p {
-				font-size: 16px;
-				color    : #5d5d5d;
+				font-family: rl2;
+				font-size  : 16px;
+				color      : #5d5d5d;
 			}
 		}
 	}
@@ -785,13 +792,14 @@ body {
 			color     : #ffffff;
 
 			h3 {
+				font-family  : rcbo1;
 				font-size    : 16px;
 				margin-bottom: 20px;
 			}
 
 			p {
-				font-size : 14px;
-				font-style: italic;
+				font-family: rci0;
+				font-size  : 14px;
 			}
 		}
 	}
@@ -1117,7 +1125,9 @@ body {
 		}
 
 		h2 {
+			font-family   : rc0;
 			font-size     : 17px;
+			font-weight   : 500;
 			color         : map-get($mau, main);
 			margin-bottom : 15px;
 			text-transform: uppercase;
@@ -1181,7 +1191,7 @@ body {
 		.mode-of-transport {
 			display      : inline-flex;
 			align-items  : center;
-			margin-left  : 30%;
+			margin-left  : 25%;
 			margin-bottom: 15px;
 
 			.item {
@@ -1199,6 +1209,7 @@ body {
 		}
 
 		.price {
+			font-family: rc0;
 			font-size  : 30px;
 			font-weight: 700;
 			margin-top : 15px;
@@ -1256,16 +1267,20 @@ body {
 
 		.content {
 			h2 {
-				font-size: 24px;
+				font-family: rcr1;
+				font-weight: normal;
+				font-size  : 24px;
 			}
 
 			p {
-				font-size: 16px;
-				color    : #5d5d5d;
-				margin   : 3% 0 2% 0;
+				font-family: rc0;
+				font-size  : 16px;
+				color      : #5d5d5d;
+				margin     : 3% 0 2% 0;
 			}
 
 			span {
+				font-family: rcbo1;
 				font-size  : 18px;
 				font-weight: 700;
 			}
@@ -1308,7 +1323,9 @@ body {
 		margin-bottom: 15px;
 
 		h2 {
-			font-size: 18px;
+			font-family: ua;
+			font-size  : 18px;
+			font-weight: 400;
 		}
 
 		span {
@@ -1357,7 +1374,8 @@ body {
 			background: #dadddf;
 
 			h3 {
-				font-size: 14px;
+				font-family: rc0;
+				font-size  : 14px;
 			}
 		}
 

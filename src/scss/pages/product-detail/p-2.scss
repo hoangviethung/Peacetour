@@ -25,6 +25,7 @@
 
 	.item {
 		h5 {
+			font-family   : rc0;
 			cursor        : pointer;
 			user-select   : none;
 			position      : relative;
@@ -98,6 +99,7 @@
 		padding    : 15px 0 15px 65px;
 
 		h2 {
+			font-family  : rc0;
 			font-size    : 18px;
 			color        : map-get($mau, main);
 			border-bottom: 1px solid map-get($mau, main);
@@ -186,7 +188,8 @@
 		margin-bottom: 10px;
 
 		h2 {
-			font-size: 18px;
+			font-family: rcbo1;
+			font-size  : 18px;
 		}
 	}
 
@@ -240,7 +243,8 @@
 		margin-bottom: 10px;
 
 		h2 {
-			font-size: 18px;
+			font-family: rcbo1;
+			font-size  : 18px;
 		}
 	}
 
@@ -422,7 +426,7 @@
 		border-bottom : 1px solid map-get($mau, main);
 
 		p {
-			font-size: 18px;
+			font-size: 17px;
 			color    : #5d5d5d;
 		}
 
