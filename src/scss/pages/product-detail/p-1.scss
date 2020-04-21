@@ -240,48 +240,6 @@
 
 	@media (max-width: 767.98px) {
 		.information-overview {
-			.list-information {
-				margin-top: 10px;
-
-				.item-information {
-					margin-bottom: 5px;
-				}
-			}
-
-			.box-booking {
-				margin-top: 5px;
-			}
-
-			.price {
-				flex     : 0 0 100%;
-				max-width: 100%;
-			}
-
-			.btn-submit {
-				flex       : 0 0 100%;
-				max-width  : 50%;
-				margin-top : 10px;
-				margin-left: unset;
-			}
-		}
-	}
-
-	@media (max-width: 575.98px) {
-		padding: 25px 0;
-
-		.slider-product-detail {
-			.slider-thumbnail {
-				position  : relative;
-				margin-top: 10px;
-				padding   : 0 25px;
-
-				.img {
-					height: 50px;
-				}
-			}
-		}
-
-		.information-overview {
 			margin-top: 25px;
 
 			h1 {
@@ -289,6 +247,10 @@
 			}
 
 			.list-information {
+				background : #cccccccc;
+				margin     : 10px 0;
+				padding-top: 10px;
+
 				.item-information {
 					margin-bottom: 5px;
 
@@ -310,6 +272,58 @@
 						}
 					}
 				}
+			}
+
+			.box-booking {
+				margin-top: 5px;
+			}
+
+			.price {
+				flex      : 0 0 100%;
+				max-width : 100%;
+				text-align: center;
+			}
+
+			.choose-other-day {
+				order: 4;
+			}
+
+			.choose-other-day,
+			.detail {
+				background   : #ffffff;
+				padding      : 20px 0;
+				margin-bottom: 0 !important;
+			}
+
+			.btn-submit {
+				flex     : 0 0 100%;
+				max-width: 50%;
+				margin   : 10px auto 0;
+			}
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		padding: 25px 0;
+
+		.slider-product-detail {
+			.slider-thumbnail {
+				padding: 0;
+
+				.img {
+					height: 50px;
+				}
+
+				.swiper-button-next,
+				.swiper-button-prev {
+					display: none;
+				}
+			}
+		}
+
+		.information-overview {
+			.btn-submit {
+				max-width: 100%;
 			}
 		}
 	}

@@ -33,7 +33,13 @@
 		}
 	}
 
-	@media (max-width: 1024.98px) {
-		display: none;
+	@media (max-width: 575.98px) {
+		.breadcrumb {
+			li {
+				a {
+					font-size: 14px;
+				}
+			}
+		}
 	}
 }

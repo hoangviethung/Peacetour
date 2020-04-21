@@ -2,11 +2,15 @@ section.product-information-detail
 	.container
 		.row
 			.col-lg-9.tab-container
-				.list-tab.pid-tab-items.d-f
-					.item.tt-u.fw-700(toggle-for="1") chương trình tour
-					.item.tt-u.fw-700(toggle-for="2") chi tiết tour
-					.item.tt-u.fw-700(toggle-for="3") lưu ý
-					.item.tt-u.fw-700(toggle-for="4") ý kiến khách hàng
+				.list-tab.pid-tab-items.row.no-gutters
+					.item.col-sm-3.col-6(toggle-for="1")
+						h5.tt-u.fw-700.lcl.lcl-1.ta-c chương trình tour
+					.item.col-sm-3.col-6(toggle-for="2")
+						h5.tt-u.fw-700.lcl.lcl-1.ta-c chi tiết tour
+					.item.col-sm-3.col-6(toggle-for="3")
+						h5.tt-u.fw-700.lcl.lcl-1.ta-c lưu ý
+					.item.col-sm-3.col-6(toggle-for="4")
+						h5.tt-u.fw-700.lcl.lcl-1.ta-c ý kiến khách hàng
 				.tab-content.pid__tab-contents
 					.content(tab-id="1")
 						.tour-program

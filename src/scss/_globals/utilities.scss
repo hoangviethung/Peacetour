@@ -738,8 +738,6 @@ body {
 	}
 
 	@media(max-width: 1024px) {
-		margin-bottom: 0;
-
 		.img-star {
 			cursor      : pointer;
 			flex        : 0 0 90px;
@@ -1268,7 +1266,8 @@ body {
 			}
 
 			span {
-				font-size: 18px;
+				font-size  : 18px;
+				font-weight: 700;
 			}
 		}
 	}
@@ -1286,20 +1285,19 @@ body {
 			.img {
 				margin-bottom: 25px;
 			}
-		}
 
-		.content {
-			h2 {
-				font-size: 18px;
-			}
+			.content {
+				h2 {
+					font-size: 18px;
+				}
 
-			p {
-				font-size: 14px;
-			}
+				p {
+					font-size: 14px;
+				}
 
-			span {
-				text-align: left;
-				font-size : 14px;
+				span {
+					font-size: 14px;
+				}
 			}
 		}
 	}
