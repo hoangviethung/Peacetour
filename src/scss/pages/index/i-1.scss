@@ -12,6 +12,12 @@
 					&::after {
 						background: none;
 					}
+
+					.description {
+						.number {
+							color: #fff;
+						}
+					}
 				}
 			}
 
@@ -54,6 +60,7 @@
 						font-size  : 125px;
 						line-height: 1;
 						display    : inline;
+						transition : .3s all ease-in-out;
 					}
 
 					.text-day {
@@ -118,12 +125,23 @@
 
 				&::before {
 					background: rgba($color: #000000, $alpha: .3);
+					transform : scale(0);
 				}
 			}
 
 			@media (min-width: 1025px) {
 				&:hover {
 					figure {
+						.description {
+							.number {
+								color: #fff;
+							}
+						}
+
+						&::before {
+							transform: scale(1);
+						}
+
 						&:after {
 							opacity: 0;
 						}
@@ -153,12 +171,6 @@
 				}
 			}
 		}
-
-		// @media (max-width: 767.98px) {
-		// 	.swiper-pagination {
-		// 		display: none;
-		// 	}
-		// }
 	}
 
 	@media (max-width: 1024.98px) {

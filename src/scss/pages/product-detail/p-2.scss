@@ -24,6 +24,10 @@
 	border-bottom : 1px solid #dee2e6;
 
 	.item {
+		+.item {
+			padding-left: 25px;
+		}
+
 		h5 {
 			font-family   : rc0;
 			cursor        : pointer;
@@ -53,6 +57,19 @@
 				&:after {
 					width: 50%;
 				}
+			}
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		.item {
+			-ms-flex        : 0 0 100%;
+			-webkit-box-flex: 0;
+			flex            : 0 0 50%;
+			max-width       : 50%;
+
+			+.item {
+				padding-left: 0;
 			}
 		}
 	}
