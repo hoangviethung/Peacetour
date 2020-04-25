@@ -323,27 +323,46 @@ header {
 		overflow      : hidden;
 		transition    : .3s all ease-in-out;
 		z-index       : 10;
-		padding       : 0 10px;
 		border-radius : 5px;
 		background    : rgba($color: #fff, $alpha: .5);
 
 		.item {
-			cursor       : pointer;
-			display      : flex;
-			align-items  : center;
-			margin-bottom: 10px;
-			opacity      : .5;
+			cursor     : pointer;
+			display    : flex;
+			align-items: center;
+			padding    : 10px 5px;
+			transition : .3s all ease-in-out;
+
+			img {
+				margin: 0 auto;
+			}
 
 			&.active {
 				margin-top: 5px;
 				order     : -1;
-				opacity   : 1;
+				padding   : 0;
+			}
+
+			@media (min-width: 1025px) {
+				&:hover {
+					background: map-get($mau, main);
+
+					&.active {
+						background: transparent;
+					}
+				}
 			}
 		}
 
 		@media (min-width: 1025px) {
 			&:hover {
-				max-height: 100px;
+				max-height: fit-content;
+
+				.item {
+					&.active {
+						margin-bottom: 10px;
+					}
+				}
 			}
 		}
 	}
