@@ -79,7 +79,7 @@
 		"fancybox": "^3.0.1",
 		"flatpickr": "^4.6.3",
 		"image-map-resizer": "^1.0.10",
-		"jquery": "^3.4.1",
+		"jquery": "^3.5.0",
 		"lazysizes": "^5.2.0",
 		"pixi.js": "^5.2.1",
 		"swiper": "^5.3.6"
